@@ -29,6 +29,9 @@ a{
 
 header{
     padding: 1rem 3rem;
+    position: sticky;
+    z-index: 1000;
+    height: 60px;
 }
 
 nav{
