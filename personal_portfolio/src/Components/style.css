@@ -1,6 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 :root{
     --bg-color: hsl(0, 0%, 98%);
     --text-color: #000;
+    --icon-color: #000;
+    --special-color: #00abf0;
+}
+
+[data-theme = "dark"]{
+    --bg-color: #081b29;
+    --text-color: #fff;
+    --icon-color: #fff;
 }
 
 html{
@@ -14,11 +23,17 @@ html{
 *{
     margin: 0;
     padding: 0;
+    line-height: 2;
+}
+
+body{
+    background-color: var(--bg-color) !important;
+    font-family: "Roboto", sans-serif;
 }
 
 img{
     max-width: 100%;
-    height: 80px;
+    /* height: 80px; */
 }
 
 a{
@@ -27,17 +42,32 @@ a{
     color: var(--text-color);
 }
 
+h1, h2, a, p{
+    color: var(--text-color);
+}
+
 header{
-    padding: 1rem 3rem;
+    /* padding: 0rem 8rem; */
     position: sticky;
     z-index: 1000;
-    height: 60px;
+    height: 100px;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+
+.opaque {
+    background: var(--bg-color); 
+    padding-bottom: 1rem;
 }
 
 nav{
     display: flex;
     justify-content: space-between;
     align-items: center;
+    /* position: fixed; */
+    padding: 2.5rem 8rem;
+    width: 100%;
 }
 
 nav .nav-links{
@@ -49,11 +79,20 @@ nav .nav-links li{
     margin-right: 2rem;
 }
 
-nav .resume{
-    background: magenta;
+.resume{
+    background: var(--special-color);
     padding: 0.75rem 1rem;
     color: #fff;
     border-radius: 0.7rem;
+}
+
+.logo h2{
+    display: flex;
+    align-items: center;
+}
+
+.logo h2 .code{
+    color: var(--special-color);
 }
 
 nav .nav-right .icon{
@@ -64,4 +103,43 @@ nav .nav-right .icon{
 
 nav .nav-right .hamburger{
     display: none;
+}
+
+body, a, header {
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.icon{
+    color: var(--icon-color);
+}
+
+
+#homepage{
+    padding: 2% 10%;
+    position: relative;
+    width: 100%;
+    /* height: 100vh; */
+    display: flex;
+    align-items: center;
+    /* flex-direction: row; */
+    justify-content: space-between;
+    /* gap: 3rem */
+}
+
+.profile-img{
+    width: 350px;
+    height: 350px;
+    border-radius: 50%;
+}
+
+.profile-img img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.home-text{
+    display: flex;
+    flex-direction: column;
 }

@@ -1,14 +1,30 @@
+/* eslint-disable react/prop-types */
 import { Link } from "react-router-dom";
-import Logo from '../assets/logo.png';
-import './style.css';
-import {FaMoon, FaBars} from 'react-icons/fa'
+// import Logo from '../assets/logo.png';
+import {FaMoon, FaBars, FaSun} from 'react-icons/fa'
+import { useEffect, useState } from "react";
+import { FaCode } from "react-icons/fa";
 
-export default function Header(){
+
+export default function Header({toggleTheme, theme}){
+
+    const [isActive, setIsActive] = useState(false);
+
+    useEffect(() => {
+        const handleScroll = () =>{
+            setIsActive(window.scrollY > 50)
+        }
+
+        window.addEventListener("scroll", handleScroll);
+        return () => window.removeEventListener("scroll", handleScroll);
+    }, []);
+
     return(
         <header>
-            <nav>
+            <nav  className={isActive ? "opaque" : "" }>
                 <div className="logo">
-                    <img src={Logo} alt="" />
+                    {/* <img src={Logo} alt="" /> */}
+                    <h2><FaCode className="code"/> Irene</h2>
                 </div>
                 <ul className="nav-links">
                     <li>
@@ -28,7 +44,7 @@ export default function Header(){
                     </li>
                 </ul>
                 <div className="nav-right">
-                    <FaMoon className="icon"/>
+                    {theme === "light" ? <FaMoon className="icon" onClick={toggleTheme}/> : <FaSun className="icon" onClick={toggleTheme}/> }
                     <Link className="resume" to="/resume">Resume</Link>
                     <FaBars className="hamburger"/>
                 </div>
