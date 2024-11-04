@@ -5,7 +5,7 @@
     --icon-color: #000;
     --special-color: #00abf0;
     --btn-color: #fff;
-    --dropdown-bgColor: rgba(255,255,255, 0.1);
+    --dropdown-bgColor: linear-gradient(130deg, #615e52 0%, #6d6b6b 100%);
 }
 
 [data-theme = "dark"]{
@@ -14,6 +14,7 @@
     --text-color: #fff;
     --icon-color: #fff;
     --btn-hoverTextColor: #fff;
+    --dropdown-bgColor: rgba(255,255,255, 0.1);
 }
 
 html{
@@ -283,8 +284,6 @@ h1{
     .socials{
         margin-top: 2rem;
     }
-
-
    
 } 
 
@@ -334,6 +333,7 @@ h1{
         color: #000;
         font-size: 2rem;
         cursor: pointer;
+        color: var(--icon-color);
     }
 
     .dropdown_menu.open{
