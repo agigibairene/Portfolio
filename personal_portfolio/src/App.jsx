@@ -5,7 +5,7 @@ import { Outlet } from "react-router-dom";
 import "./Components/style.css"
 
 function App() {
-  const [theme, setTheme] = useTheme("theme", "light");
+  const [theme, setTheme] = useTheme("theme", "dark");
 
   useEffect(()=>{
     document.body.setAttribute("data-theme", theme)

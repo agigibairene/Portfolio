@@ -4,7 +4,7 @@ export function useTheme(key, defaultTheme) {
     const [theme, setTheme] = useState(()=>{
         let defaultValue;
         try{
-            const userTheme = localStorage(key, JSON.parse(defaultTheme) || String(defaultValue))
+            const userTheme = localStorage.getItem(key) || String(defaultValue)
             return userTheme;
         }
         catch(err){
