@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import profileImg from "../assets/profile.jpg";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
+import { FaArrowDown } from "react-icons/fa6";
 
 export default function Home(){
     return(
@@ -13,7 +14,9 @@ export default function Home(){
                         mobile development
                     </p>
                     <div className="btns">
-                        <Link to="#" className="resume download">Download</Link>
+                        <Link to="#" className="resume download">
+                            Download <FaArrowDown className="arrow-icon"/>
+                        </Link>
                         <Link to="#" className="get-intouch">Contact me</Link>
                     </div>
                 </div>

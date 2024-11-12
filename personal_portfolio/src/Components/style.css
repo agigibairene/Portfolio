@@ -5,7 +5,9 @@
     --icon-color: #000;
     --special-color: #00abf0;
     --btn-color: #fff;
-    --dropdown-bgColor: linear-gradient(130deg, #615e52 0%, #6d6b6b 100%);
+    --dropdown-bgColor: #081b29;
+    --dropdown-textColor: #fff;
+    --bottom: #00abf0;
 }
 
 [data-theme = "dark"]{
@@ -15,6 +17,8 @@
     --icon-color: #fff;
     --btn-hoverTextColor: #fff;
     --dropdown-bgColor: rgba(255,255,255, 0.1);
+    --dropdown-textColor: #fff;
+    --bottom: #fff;
 }
 
 html{
@@ -72,7 +76,6 @@ nav{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    /* position: fixed; */
     padding: 2.5rem 8rem;
     width: 100%;
 }
@@ -84,6 +87,26 @@ nav .nav-links{
 
 nav .nav-links a:hover{
     color: var(--special-color);
+}
+
+nav .nav-links li a{
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+nav .nav-links li a::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    width: 0;
+    height: 5px;
+    background-color: var(--bottom);
+    transition: width 0.3s ease;
+}
+
+nav .nav-links li a:hover::after{
+    width: 100%;
 }
 
 nav .nav-links li{
@@ -185,9 +208,18 @@ h1{
     margin-left: 1rem;
     background: #141414;
     border: 2px solid #141414;
-    padding: 0.75rem 1rem;
+    padding: 0.7rem 1rem;
     border-radius: 0.5rem;
     color: var(--btn-color);
+}
+
+.btns .resume.download{
+    transition:  all 0.6s ease-in-out;
+}
+
+.btns .resume.download:hover .arrow-icon{
+    color: var(--icon-color);
+    transform: translateY(5px);
 }
 
 .btns .resume.download:hover{
@@ -213,10 +245,6 @@ h1{
     justify-content: center;
     height: 45px;
     width: 45px;
-    /* background: linear-gradient(130deg, #615e52 0%, #6d6b6b 100%);
-    box-shadow: 0px 20px 40px #151561;
-    border: 1px solid #3b3b3b;
-    border-radius: 50%; */
     transition:  all 0.6s ease-in-out;
 }
 
@@ -245,8 +273,8 @@ h1{
     }
 
     .profile-img{
-        width: 250px;
-        height: 250px;
+        width: 280px;
+        height: 280px;
     }
 
     nav{
@@ -259,6 +287,39 @@ h1{
     }    
 }
 
+@media (max-width: 880px){
+    h1{
+        font-size: 2rem;
+    }
+
+    .profile-img{
+        width: 250px;
+        height: 240px;
+    }
+
+    #home-content{
+        gap: 2rem;
+    }
+}
+
+@media (max-width: 780px) {
+    .profile-img{
+        width: 280px;
+        /* height: 220px; */
+    }
+
+    #home-content{
+        gap: 2.5rem;
+    }
+}
+
+@media (max-width: 715px) {
+    .profile-img{
+        width: 330px;
+        /* height: 220px; */
+    }
+}
+
 @media (max-width: 600px) {
     nav .nav-links{
         display: none;
@@ -269,20 +330,28 @@ h1{
         gap: 2rem;
     }
 
+    h1, .title, #home-content p{
+        text-align: center;
+    }
+
+
+    .btns{
+        margin-inline:  auto;
+    }
+
     #home-content{
         display: flex;
         flex-direction: column-reverse;
         align-items: center;
-        justify-content: space-between;
     }    
     
     .profile-img{
-        width: 350px;
-        height: 350px;
+        width: 250px;
+        height: 250px;
     }
 
     .socials{
-        margin-top: 2rem;
+        margin-top: 3rem;
     }
    
 } 
@@ -309,6 +378,26 @@ h1{
     padding: 0.7rem;
     align-items: center;
     justify-content: center;
+}
+
+.dropdown_menu ul li a{
+    color: var(--dropdown-textColor);
+    position: relative;
+}
+
+.dropdown_menu ul li a::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 5px;
+    background-color: var(--special-color);
+    transition: width 0.3s ease;
+}
+
+.dropdown_menu ul li a:hover::after {
+    width: 100%;
 }
 
 
@@ -347,3 +436,4 @@ h1{
         width: unset;
     }
 }
+

@@ -1,22 +1,23 @@
 import { useEffect, useState } from "react";
 
 export function useTheme(key, defaultTheme) {
-    const [theme, setTheme] = useState(()=>{
-        let defaultValue;
-        try{
-            const userTheme = localStorage.getItem(key) || String(defaultValue)
-            return userTheme;
+    const [theme, setTheme] = useState(() => {
+        try {
+            const userTheme = localStorage.getItem(key);
+            return userTheme ? JSON.parse(userTheme) : defaultTheme;
+        } catch (err) {
+            console.error("Error reading theme from localStorage:", err);
+            return defaultTheme;
         }
-        catch(err){
-            console.error(err);
-            return defaultTheme; 
-        }   
+    });
 
-});
+    useEffect(() => {
+        try {
+            localStorage.setItem(key, JSON.stringify(theme));
+        } catch (err) {
+            console.error("Error saving theme to localStorage:", err);
+        }
+    }, [key, theme]);
 
-    useEffect(()=>{
-        localStorage.setItem(key, JSON.stringify(theme))
-    }, [key, theme])
-
-    return [theme, setTheme]
+    return [theme, setTheme];
 }
