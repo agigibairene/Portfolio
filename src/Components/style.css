@@ -120,6 +120,11 @@ nav .nav-links li{
     border-radius: 0.7rem;
 }
 
+button{
+    border: 0;
+    outline: 0;
+}
+
 .logo h2{
     display: flex;
     align-items: center;

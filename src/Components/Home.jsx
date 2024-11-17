@@ -2,8 +2,30 @@ import { Link } from "react-router-dom";
 import profileImg from "../assets/profile.jpg";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { FaArrowDown } from "react-icons/fa6";
+import resumePdf from "../assets/resume.pdf";
 
 export default function Home(){
+
+    const handleDownload = async () => {
+        try {
+          const response = await fetch(resumePdf);
+          const blob = await response.blob();
+          const url = window.URL.createObjectURL(blob);
+          
+          const link = document.createElement('a');
+          link.href = url;
+          link.setAttribute('download', resumePdf); // Specify the file name for download
+          document.body.appendChild(link);
+          link.click();
+          
+          // Clean up
+          link.remove();
+          window.URL.revokeObjectURL(url);
+        } catch (error) {
+          console.error("Download failed:", error);
+        }
+      };
+
     return(
         <section id="homepage">
             <div id="home-content">
@@ -14,9 +36,9 @@ export default function Home(){
                         mobile development
                     </p>
                     <div className="btns">
-                        <Link to="#" className="resume download">
+                        <button onClick={handleDownload} className="resume download">
                             Download <FaArrowDown className="arrow-icon"/>
-                        </Link>
+                        </button>
                         <Link to="#" className="get-intouch">Contact me</Link>
                     </div>
                 </div>
