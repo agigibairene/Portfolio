@@ -1,7 +1,10 @@
 import { useEffect } from "react";
 import Header from "./Components/Header";
 import { useTheme } from "./hooks/useTheme";
-import { Outlet } from "react-router-dom";
+// import { Outlet } from "react-router-dom";
+
+import About from "./Components/About";
+import Home from "./Components/Home";
 import "./Components/style.css"
 
 function App() {
@@ -18,7 +21,8 @@ function App() {
   return (
     <section id="home" >
       <Header toggleTheme={toggleTheme} theme={theme}/>
-      <Outlet />
+      <Home />
+      <About />
     </section>
   )
 }

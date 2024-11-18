@@ -8,6 +8,7 @@
     --dropdown-bgColor: #081b29;
     --dropdown-textColor: #fff;
     --bottom: #00abf0;
+    --box-shadow: #00000040 .121875rem .121875rem .1625rem;
 }
 
 [data-theme = "dark"]{
@@ -442,3 +443,62 @@ h1{
     }
 }
 
+
+/***************************** ABOUT PAGE STYLE ******************/
+.row-logo{
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    justify-content: center;
+}
+
+h2{
+    text-align: center;
+}
+
+.row-logo .tech-card{
+    background-color: var(--bg-color);
+    border-radius: 0.4rem;
+    width: 150px;
+    height: 150px;
+    display: flex;
+    box-shadow: var(--box-shadow);
+    animation: animate 1.5s infinite;
+}
+
+.row-logo .tech-card img{
+    margin: auto;
+    object-fit: contain;
+}
+
+@keyframes animate {
+    0%{
+        transform: translateY(0px);
+    }
+    50%{
+        transform: translateY(-10px);
+    }
+    100%{
+        transform: translateX(0px);
+    }
+}
+/* 
+.tech-card:first-child{
+    animation-delay: 0.2s;
+}
+
+.tech-card:nth-child(2){
+    animation-delay: 0.6s;
+}
+
+.tech-card:nth-child(3){
+    animation-delay: 10s;
+}
+
+.tech-card:nth-child(4){
+    animation-delay: 14s;
+}
+
+.tech-card:nth-child(5){
+    animation-delay: 18s;
+} */
