@@ -1,10 +1,11 @@
 /* eslint-disable react/prop-types */
 import { Link } from "react-router-dom";
-// import Logo from '../assets/logo.png';
 import {FaMoon, FaBars, FaSun, FaTimes} from 'react-icons/fa'
 import { useEffect, useState } from "react";
 import { FaCode } from "react-icons/fa";
 import { useRef } from "react";
+
+import resume from "/resume.pdf";
 
 
 export default function Header({toggleTheme, theme}){
@@ -64,7 +65,9 @@ export default function Header({toggleTheme, theme}){
                 </ul>
                 <div className="nav-right" onClick={toggleSideMenu}>
                     {theme === "light" ? <FaMoon className="icon" onClick={toggleTheme}/> : <FaSun className="icon" onClick={toggleTheme}/> }
-                    <Link className="resume" to="/resume">Resume</Link>
+                    <a className="resume" href={resume} target="_blank" rel="noopener noreferrer">
+                        Resume
+                    </a>
                     {toggle ? <FaTimes className="hamburger"  /> : <FaBars className="hamburger" />}
                 </div>
             </nav>
