@@ -4,15 +4,19 @@ import reactLogo from '/reactjs.svg';
 import jsLogo from '/javascript.png';
 import nodejs from '/node-js.svg';
 import expressLogo from '/express.svg';
+import flutter from "/flutter.svg";
+import dart from "/dart.svg";
 
-const logos = [jsLogo, reactLogo, nodejs, expressLogo];
+import anime from '/anime.gif';
+
+const logos = [jsLogo, reactLogo, nodejs, expressLogo, flutter, dart];
 
 export default function About(){
     return(
         <section id="about">
             <h2>About me</h2>
             <div className="mini-image">
-
+                <img src={anime} alt="" />
             </div>
             <div className="about-txt">
                 
