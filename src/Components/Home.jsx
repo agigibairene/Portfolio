@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import profileImg from "../assets/profile.jpg";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { FaArrowDown } from "react-icons/fa6";
-import resumePdf from "../assets/resume.pdf";
+import resumePdf from "/resume.pdf";
 
 export default function Home(){
 
