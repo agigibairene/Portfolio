@@ -463,7 +463,7 @@ h1{
 
 /***************************** ABOUT PAGE STYLE ******************/
 #about{
-    padding: 1% 3rem;
+    padding: 1% 10%;
 }
 
 .row-logo{
@@ -471,6 +471,8 @@ h1{
     align-items: center;
     gap: 2rem;
     justify-content: center;
+    margin-block: 2rem;
+    margin-top: 2rem;
 }
 
 h2{
@@ -512,8 +514,15 @@ h2{
     margin-bottom: 2rem;
 }
 
-.about-txt div{
-    padding-inline: 2rem;
+.about-txt {
+    padding-right: 2rem;
+    text-align: left;
+    color: var(--text-color);
+}
+
+.lottie{
+    height: 380px;
+    width: 380px;
 }
 
 
@@ -550,6 +559,7 @@ h2{
     font-size: 1rem;
     cursor: pointer;
     font-family: "Fraunces", serif;
+    color: var(--text-color);
 }
 
 .center-err{
