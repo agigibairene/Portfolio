@@ -526,12 +526,37 @@ h2{
 
 .lottie{
     height: 380px;
-    width: 380px;
+    width: 350px;
+}
+
+.resume.download.resume-doc{
+    letter-spacing: 2px;
+    display: flex;
+    align-items: center;
+    font-size: 0.8rem;
+    cursor: pointer;
+} 
+
+.resume.download.resume-doc .arrow-icon{
+    font-size: 1.5rem;
 }
 
 
+@media (max-width: 845px) {
+    .about-me{
+        display: flex;
+        flex-direction: column;
+    }
 
+    .resume.download.resume-doc{
+       margin-inline: auto;
+       padding-inline: 1.5rem;
+    } 
 
+    .about-txt{
+        align-items: center;
+    }
+}
 
 /****************************ERROR PAGE *****************/
 #error-page{
@@ -539,6 +564,7 @@ h2{
     align-items: center;
     justify-content: center;
     font-family: "Fraunces", serif;
+    background-color: var(--bg-color);
 }
 
 #error-page h2{

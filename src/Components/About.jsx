@@ -1,5 +1,5 @@
 import { DotLottieReact } from '@lottiefiles/dotlottie-react';
-import { FaArrowDown } from 'react-icons/fa';
+import { IoDocumentTextOutline } from "react-icons/io5";
 
 import TechLogo from '../utils/Logo';
 import reactLogo from '/reactjs.svg';
@@ -41,8 +41,8 @@ export default function About(){
                     publishing packages and web page editors now use Lorem Ipsum as their 
                     default model text, and a search for lorem ipsum will uncover many.
                     </div>
-                    <button onClick={handleDownload} className="resume download">
-                        Download <FaArrowDown className="arrow-icon"/>
+                    <button onClick={handleDownload} className="resume download resume-doc ">
+                        Resume <IoDocumentTextOutline className="arrow-icon"/>
                     </button>
                 </div>
             </div>
