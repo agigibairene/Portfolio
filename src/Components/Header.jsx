@@ -45,6 +45,9 @@ export default function Header({toggleTheme, theme}){
                 <div className="logo">
                     {/* <img src={Logo} alt="" /> */}
                     <h2><FaCode className="code"/> Irene</h2>
+                    <div className="theme-icon dis">
+                        {theme === "light" ? <FaMoon className="icon" onClick={toggleTheme}/> : <FaSun className="icon" onClick={toggleTheme}/> }
+                    </div>
                 </div>
                 <ul className="nav-links">
                     <li>

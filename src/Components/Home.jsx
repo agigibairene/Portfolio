@@ -3,29 +3,12 @@ import profileImg from "../assets/profile.jpg";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { FaArrowDown } from "react-icons/fa6";
 import resumePdf from "/resume.pdf";
+import useDownLoadResume from "../hooks/useDownLoadResume";
 
 export default function Home(){
 
-    const handleDownload = async () => {
-        try {
-          const response = await fetch(resumePdf);
-          const blob = await response.blob();
-          const url = window.URL.createObjectURL(blob);
-          
-          const link = document.createElement('a');
-          link.href = url;
-          link.setAttribute('download', resumePdf); // Specify the file name for download
-          document.body.appendChild(link);
-          link.click();
-          
-          // Clean up
-          link.remove();
-          window.URL.revokeObjectURL(url);
-        } catch (error) {
-          console.error("Download failed:", error);
-        }
-      };
-
+    const {handleDownload} = useDownLoadResume(resumePdf);
+    
     return(
         <section id="homepage">
             <div id="home-content">

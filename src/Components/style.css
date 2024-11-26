@@ -126,6 +126,13 @@ button{
     outline: 0;
 }
 
+.logo{
+    display: flex;
+    align-items: center;
+    flex-flow: row nowrap; 
+    row-gap: 0.5rem;
+}
+
 .logo h2{
     display: flex;
     align-items: center;
@@ -158,6 +165,10 @@ body, a, header {
 
 .icon{
     color: var(--icon-color);
+}
+
+.logo .theme-icon {
+    display: none;
 }
 
 /*********** HOME PAGE STYLES*********/
@@ -423,6 +434,12 @@ h1{
         padding: 2.5rem 3rem;
     }
 
+    .theme-icon.dis {
+        display: block;
+        background-color: red;
+    }
+    
+
     nav .nav-right .hamburger{
         display: block;
         color: #000;
@@ -445,6 +462,10 @@ h1{
 
 
 /***************************** ABOUT PAGE STYLE ******************/
+#about{
+    padding: 1% 3rem;
+}
+
 .row-logo{
     display: flex;
     align-items: center;
@@ -459,8 +480,8 @@ h2{
 .row-logo .tech-card{
     background-color: var(--bg-color);
     border-radius: 0.4rem;
-    width: 150px;
-    height: 150px;
+    width: 80px;
+    height: 80px;
     display: flex;
     box-shadow: var(--box-shadow);
     animation: animate 1.5s infinite;
@@ -482,26 +503,19 @@ h2{
         transform: translateX(0px);
     }
 }
-/* 
-.tech-card:first-child{
-    animation-delay: 0.2s;
+
+.about-me{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2.5rem;
+    align-items: center;
+    margin-bottom: 2rem;
 }
 
-.tech-card:nth-child(2){
-    animation-delay: 0.6s;
+.about-txt div{
+    padding-inline: 2rem;
 }
 
-.tech-card:nth-child(3){
-    animation-delay: 10s;
-}
-
-.tech-card:nth-child(4){
-    animation-delay: 14s;
-}
-
-.tech-card:nth-child(5){
-    animation-delay: 18s;
-} */
 
 
 
@@ -543,4 +557,8 @@ h2{
     align-items: center;
     flex-direction: column;
     gap: 0.5rem;
+}
+
+.error-image{
+    height: 370px;
 }

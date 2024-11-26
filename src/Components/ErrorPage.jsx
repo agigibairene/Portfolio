@@ -1,7 +1,9 @@
 import { useRouteError } from "react-router-dom";
 import { Link } from "react-router-dom";
+import { DotLottieReact } from '@lottiefiles/dotlottie-react';
 
-import errorImage from "/error.gif";
+// import errorImage from "/error.gif";
+import errorImg from "../assets/error-404.lottie";
 
 export default function ErrorPage(){
     const {status, statusText} = useRouteError();
@@ -10,7 +12,13 @@ export default function ErrorPage(){
         <section id="error-page">
             <div className="content">
                 <div className="err-image">
-                    <img src={errorImage} alt="" />
+                    {/* <img src={errorImage} alt="" /> */}
+                    <DotLottieReact
+                        src={errorImg}
+                        loop
+                        autoplay
+                        className='error-image'
+                    />
                 </div>
 
                 <div className="center-err">
