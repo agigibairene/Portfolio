@@ -33,10 +33,13 @@ export default function About(){
                 </div>
                 <div className="about-txt">
                     <div>
-                        With a solid foundation in MongoDB, Express.js, React.js, and Node.js,
-                        I thrive in the world of full-stack development. I have a deep understanding of
-                        each layer of the MERN stack and utilize this knowledge
-                        to build seamless, scalable, and user-friendly applications that leave a lasting impression.
+                    It is a long established fact that a reader will be distracted by 
+                    the readable content of a page when looking at its layout. 
+                    The point of using Lorem Ipsum is that it has a more-or-less 
+                    normal distribution of letters, as opposed to using Content here, 
+                    content here, making it look like readable English. Many desktop 
+                    publishing packages and web page editors now use Lorem Ipsum as their 
+                    default model text, and a search for lorem ipsum will uncover many.
                     </div>
                     <button onClick={handleDownload} className="resume download">
                         Download <FaArrowDown className="arrow-icon"/>
@@ -45,7 +48,7 @@ export default function About(){
             </div>
 
             <div className="tech-stack">
-                <h2>Technologies - My tech Stack</h2>
+                <h2>My tech Stack</h2>
                 <div className="row-logo">
                    {
                     logos.map((logo, index) => 
