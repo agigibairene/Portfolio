@@ -6,6 +6,7 @@ import { useTheme } from "./hooks/useTheme";
 import About from "./Components/About";
 import Home from "./Components/Home";
 import "./Components/style.css"
+import ScrollToTop from "./utils/scrollToTop";
 
 function App() {
   const [theme, setTheme] = useTheme("theme", "dark");
@@ -21,6 +22,7 @@ function App() {
   return (
     <section id="home" >
       <Header toggleTheme={toggleTheme} theme={theme}/>
+      <ScrollToTop />
       <Home />
       <About />
     </section>

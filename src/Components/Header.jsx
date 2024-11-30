@@ -1,12 +1,20 @@
 /* eslint-disable react/prop-types */
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import {FaMoon, FaBars, FaSun, FaTimes} from 'react-icons/fa'
 import { useEffect, useState } from "react";
 import { FaCode } from "react-icons/fa";
 import { useRef } from "react";
 
+
 import resume from "/resume.pdf";
 
+const links = [
+    { path: "/", label: "Home", name: "home"},
+    { path: "/about", label: "About Me", name: "about" },
+    { path: "/skills", label: "Skills", name: "skills" },
+    { path: "/projects", label: "Projects", name: "projects" },
+    { path: "/contact", label: "Contact", name: "contact" },
+];
 
 export default function Header({toggleTheme, theme}){
 
@@ -14,6 +22,7 @@ export default function Header({toggleTheme, theme}){
     const [isActive, setIsActive] = useState(false);
     const refDropdownContainer = useRef();
     const navLinks = useRef();
+    const ref = useRef();
 
     useEffect(() => {
         const handleScroll = () =>{
@@ -46,25 +55,22 @@ export default function Header({toggleTheme, theme}){
                     {/* <img src={Logo} alt="" /> */}
                     <h2><FaCode className="code"/> Irene</h2>
                     <div className="theme-icon dis">
-                        {theme === "light" ? <FaMoon className="icon" onClick={toggleTheme}/> : <FaSun className="icon" onClick={toggleTheme}/> }
+                        {
+                           theme === "light" ? <FaMoon className="icon" onClick={toggleTheme}/> : 
+                            <FaSun className="icon" onClick={toggleTheme}/> 
+                        }
                     </div>
                 </div>
                 <ul className="nav-links">
-                    <li>
-                        <Link to="/">Home</Link>
-                    </li>
-                    <li>
-                        <Link to="/about">About Me</Link>
-                    </li>
-                    <li>
-                        <Link to="/skills">Skills</Link>
-                    </li>
-                    <li>
-                        <Link to="/projects">Projects</Link>
-                    </li>
-                    <li>
-                        <Link to="/contact">Contact</Link>
-                    </li>
+                    {
+                        links.map(({ path, label, name }) => (
+                            <li key={path} onClick={() => document.getElementById(name).scrollIntoView({ behavior: 'smooth' })}>
+                                <NavLink className={({ isActive }) => (isActive ? "active" : "")} to={path}>
+                                    {label}
+                                </NavLink>
+                            </li>
+                        ))
+                    }
                 </ul>
                 <div className="nav-right" onClick={toggleSideMenu}>
                     {theme === "light" ? <FaMoon className="icon" onClick={toggleTheme}/> : <FaSun className="icon" onClick={toggleTheme}/> }
@@ -78,22 +84,22 @@ export default function Header({toggleTheme, theme}){
             <div className={`${toggle ? "dropdown_menu open" : "dropdown_menu"}`} ref={refDropdownContainer}>
                 <ul className="nav-links" ref={navLinks}>
                     <li>
-                        <Link to="/">Home</Link>
+                        <NavLink className={({isActive})=> isActive ? "active" : ""} to="/">Home</NavLink>
                     </li>
                     <li>
-                        <Link to="/about">About Me</Link>
+                        <NavLink  className={({isActive})=> isActive ? "active" : ""}  to="/about">About Me</NavLink>
                     </li>
                     <li>
-                        <Link to="/skills">Skills</Link>
+                        <NavLink  className={({isActive})=> isActive ? "active" : ""} to="/skills">Skills</NavLink>
                     </li>
                     <li>
-                        <Link to="/projects">Projects</Link>
+                        <NavLink  className={({isActive})=> isActive ? "active" : ""} to="/projects">Projects</NavLink>
                     </li>
                     <li>
-                        <Link to="/contact">Contact</Link>
+                        <NavLink  className={({isActive})=> isActive ? "active" : ""} to="/contact">Contact</NavLink>
                     </li>
                     <li>
-                        <Link className="resume" to="/resume">Resume</Link>
+                        <NavLink className="resume" to="/resume">Resume</NavLink>
                     </li>
                 </ul>
             </div>

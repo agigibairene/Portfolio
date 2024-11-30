@@ -114,6 +114,17 @@ nav .nav-links li{
     margin-right: 2rem;
 }
 
+.nav-links .active::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 5px;
+    background-color: var(--special-color);
+    /* transition: width 0.3s ease; */
+}
+
 .resume{
     background: var(--special-color);
     padding: 0.7rem 1rem;
@@ -602,3 +613,8 @@ h2{
 .error-image{
     height: 370px;
 }
+
+html {
+    scroll-behavior: smooth; /* Ensure smooth scrolling is set globally */
+}
+  

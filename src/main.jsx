@@ -5,10 +5,16 @@ import App from './App.jsx';
 import Home from './Components/Home.jsx';
 import About from './Components/About.jsx';
 import ErrorPage from './Components/ErrorPage.jsx';
+import ScrollToTop from './utils/scrollToTop.jsx';
 
 const appRouter = createBrowserRouter([
   { path: '/',
-    element: <App />,
+    element: (
+      <>
+        <ScrollToTop />
+        <App />
+      </>
+    ),
     errorElement: <ErrorPage />,
     children: [
       { path: "/",
