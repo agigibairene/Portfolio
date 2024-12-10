@@ -7,6 +7,7 @@ import About from "./Components/About";
 import Home from "./Components/Home";
 import "./Components/style.css"
 import ScrollToTop from "./utils/scrollToTop";
+import Skills from "./Components/Skills";
 
 function App() {
   const [theme, setTheme] = useTheme("theme", "dark");
@@ -25,6 +26,7 @@ function App() {
       <ScrollToTop />
       <Home />
       <About />
+      <Skills />
     </section>
   )
 }
