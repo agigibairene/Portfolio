@@ -8,6 +8,7 @@ import Home from "./Components/Home";
 import "./Components/style.css"
 import ScrollToTop from "./utils/scrollToTop";
 import Skills from "./Components/Skills";
+import Contact from "./Components/Contact";
 
 function App() {
   const [theme, setTheme] = useTheme("theme", "dark");
@@ -27,6 +28,7 @@ function App() {
       <Home />
       <About />
       <Skills />
+      <Contact />
     </section>
   )
 }
