@@ -22,7 +22,7 @@ export default function Header({toggleTheme, theme}){
     const [isActive, setIsActive] = useState(false);
     const refDropdownContainer = useRef();
     const navLinks = useRef();
-    const ref = useRef();
+
 
     useEffect(() => {
         const handleScroll = () =>{
@@ -52,12 +52,11 @@ export default function Header({toggleTheme, theme}){
         <header>
             <nav  className={isActive ? "opaque" : "" }>
                 <div className="logo">
-                    {/* <img src={Logo} alt="" /> */}
                     <h2><FaCode className="code"/> Irene</h2>
-                    <div className="theme-icon dis">
+                    <div className="theme-icon">
                         {
-                           theme === "light" ? <FaMoon className="icon" onClick={toggleTheme}/> : 
-                            <FaSun className="icon" onClick={toggleTheme}/> 
+                           theme === "light" ? <FaMoon className="iconType"  onClick={toggleTheme}/> : 
+                            <FaSun className="iconType" onClick={toggleTheme}/> 
                         }
                     </div>
                 </div>

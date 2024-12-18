@@ -141,12 +141,13 @@ button{
     display: flex;
     align-items: center;
     flex-flow: row nowrap; 
-    row-gap: 0.5rem;
+    gap: 0.8rem;
 }
 
 .logo h2{
     display: flex;
     align-items: center;
+    margin: 0;
 }
 
 .logo h2 .code{
@@ -180,6 +181,11 @@ body, a, header {
 
 .logo .theme-icon {
     display: none;
+    margin: 0;
+    cursor: pointer;
+    font-size: 1.2rem;
+    color: var(--icon-color);
+    
 }
 
 /*********** HOME PAGE STYLES*********/
@@ -445,10 +451,13 @@ h1{
         padding: 2.5rem 3rem;
     }
 
-    .theme-icon.dis {
-        display: block;
-        background-color: red;
+    .logo .theme-icon {
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
+
+   
     
 
     nav .nav-right .hamburger{
