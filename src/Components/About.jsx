@@ -1,5 +1,6 @@
 import { DotLottieReact } from '@lottiefiles/dotlottie-react';
 import data from '../utils/AboutData';
+import "../styles/about.css";
 
 import TechLogo from '../utils/Logo';
 import reactLogo from '/reactjs.svg';
