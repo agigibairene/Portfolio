@@ -216,8 +216,14 @@ body, a, header {
     display: block;
 }
 
+#homepage .title .wave-icon{
+    font-size: 3rem;
+}
+
 #homepage .title .wave{
-    font-size: 3.5rem;
+    animation: waving-hand 2.5s infinite;
+    transform-origin: 70% 70%;
+    display: inline-block;
 }
 
 h1{
@@ -242,6 +248,7 @@ h1{
 
 .get-intouch{
     margin-left: 1rem;
+    font-size: 0.9rem;
     background: #141414;
     border: 2px solid #141414;
     padding: 0.4rem 1rem;
@@ -553,10 +560,9 @@ h2{
 }
 
 .resume.download{
-    letter-spacing: 2px;
     display: flex;
     align-items: center;
-    font-size: 0.8rem;
+    font-size: 0.9rem;
     cursor: pointer;
 } 
 
@@ -633,4 +639,46 @@ html {
 
 input, textarea{
     font-family: inherit;
+}
+
+
+/*********** HAND WAVE MOTION  *********/
+@keyframes waving-hand {
+    0%{
+        transform: rotate(0deg);
+    }
+    10%{
+        transform: rotate(14deg);
+    }
+    20%{
+        transform: rotate(-8deg);
+    }
+    30%{
+        transform: rotate(14deg);
+    }
+    40%{
+        transform: rotate(-4deg);
+    }
+    50%{
+        transform: rotate(10deg);
+    }
+    60%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(0deg);
+    }
+}
+
+
+.scroll-to-top{
+    height: 55px;
+    width: 55px;
+    border-radius: 50%;
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    background-color: #00abf0;
+    color: #fff;
+    justify-content: center;
 }

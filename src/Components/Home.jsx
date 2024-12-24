@@ -17,7 +17,8 @@ export default function Home(){
                     <motion.h1 initial={{opacity:0, x:-100}}
                         whileInView={{opacity:1, x:0}}
                         transition={{duration:1, delay:0.2}}>
-                    <span className="title">Hiii Everyone <span className="wave">👋</span></span>
+                    <span className="title">Hiii Everyone 
+                        <span className="wave-icon"><span className="wave">👋</span>🥰</span></span>
                             Irene Akawin Agigiba
                     </motion.h1>
                     <motion.p 
@@ -42,7 +43,7 @@ export default function Home(){
                         <button onClick={handleDownload} className="resume download ">
                         Resume <IoDocumentTextOutline className="arrow-icon"/>
                         </button>
-                        <Link to="#" className="get-intouch">Contact me</Link>
+                        <Link to="/contact" className="get-intouch">Contact me</Link>
                     </motion.div>
                 </div>
                  <div className="profile-img">

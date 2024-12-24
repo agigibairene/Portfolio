@@ -1,6 +1,7 @@
 import { DotLottieReact } from '@lottiefiles/dotlottie-react';
 import data from '../utils/AboutData';
 import "../styles/about.css";
+import { motion } from 'framer-motion';
 
 import TechLogo from '../utils/Logo';
 import reactLogo from '/reactjs.svg';
@@ -35,13 +36,17 @@ export default function About(){
                             data.map(item =>{
                                 const {icon, description, title} = item;
                                 return(
-                                    <li key={icon} className="aboutItem">
+                                    <motion.li 
+                                        initial={{opacity:0, x:100}}
+                                        whileInView={{opacity:1, x:0}}
+                                        transition={{duration:1, delay:0.2}}
+                                        key={icon} className="aboutItem">
                                         {icon}
                                         <div className="aboutItemText">
                                             <h3>{title}</h3>
                                             <p>{description}</p>
                                         </div>
-                                    </li>
+                                    </motion.li>
                                 )
                             })
                         }
