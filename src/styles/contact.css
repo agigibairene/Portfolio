@@ -22,7 +22,8 @@
 }
 
 .section {
-    padding: 4rem 0 2rem
+    padding: 2rem 4rem;
+   
 }
 
 .contact__container {
@@ -163,10 +164,6 @@
         width: 100%
     }
 
-    .contact__content {
-        margin-left: 100px
-    }
-
     .btn-11 {
         margin-left: 5px
     }
@@ -222,9 +219,15 @@
     box-shadow: var(--box-shadow);
     display: flex;
     align-items: center;
+    transition: background-color 0.3s ease;
 }
 
 .msg .msg-icon{
     font-size: 1.5rem;
     margin-left: 0.5rem;
+    transition: transform 0.3s ease; 
+}
+
+.msg:hover .msg-icon {
+    transform: translateY(-0.2rem);
 }

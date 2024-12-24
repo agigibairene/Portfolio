@@ -73,7 +73,7 @@ export default function Header({toggleTheme, theme}){
                 </ul>
                 <div className="nav-right" onClick={toggleSideMenu}>
                     {theme === "light" ? <FaMoon className="icon" onClick={toggleTheme}/> : <FaSun className="icon" onClick={toggleTheme}/> }
-                    <a className="resume" href={resume} target="_blank" rel="noopener noreferrer">
+                    <a className="resume view" href={resume} target="_blank" rel="noopener noreferrer">
                         Resume
                     </a>
                     {toggle ? <FaTimes className="hamburger"  /> : <FaBars className="hamburger" />}
@@ -82,23 +82,17 @@ export default function Header({toggleTheme, theme}){
 
             <div className={`${toggle ? "dropdown_menu open" : "dropdown_menu"}`} ref={refDropdownContainer}>
                 <ul className="nav-links" ref={navLinks}>
+                    {
+                        links.map(({ path, label, name }) => (
+                            <li key={path} onClick={() => document.getElementById(name).scrollIntoView({ behavior: 'smooth' })}>
+                                <NavLink className={({ isActive }) => (isActive ? "active" : "")} to={path}>
+                                    {label}
+                                </NavLink>
+                            </li>
+                        ))
+                    }
                     <li>
-                        <NavLink className={({isActive})=> isActive ? "active" : ""} to="/">Home</NavLink>
-                    </li>
-                    <li>
-                        <NavLink  className={({isActive})=> isActive ? "active" : ""}  to="/about">About Me</NavLink>
-                    </li>
-                    <li>
-                        <NavLink  className={({isActive})=> isActive ? "active" : ""} to="/skills">Skills</NavLink>
-                    </li>
-                    <li>
-                        <NavLink  className={({isActive})=> isActive ? "active" : ""} to="/projects">Projects</NavLink>
-                    </li>
-                    <li>
-                        <NavLink  className={({isActive})=> isActive ? "active" : ""} to="/contact">Contact</NavLink>
-                    </li>
-                    <li>
-                        <NavLink className="resume" to="/resume">Resume</NavLink>
+                        <NavLink className="resume view" to="/resume">Resume</NavLink>
                     </li>
                 </ul>
             </div>

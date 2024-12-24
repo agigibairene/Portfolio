@@ -43,7 +43,7 @@
   align-items: center;
   border-radius: 20px;
   list-style: none;
-  padding: 20px;
+  padding: 1.5rem;
   background-color: #ffffff;
   /* background: #19376d;
   background: linear-gradient(90deg, #324b79 0%, rgba(25, 55, 109, 0) 100%); */
@@ -58,12 +58,13 @@
 .aboutItem .about-icon {
   font-size: 2rem;
   margin-right: 1rem;
+  /* color: #00abf0;; */
 }
 
 .aboutItem h3 {
   font-size: 1rem;
   font-weight: 600;
-  color: #000;
+  color: #00abf0;;
 }
 
 .aboutItem p {
@@ -91,8 +92,7 @@
   }
 
   .aboutItem {
-    padding-left: 0;
-    padding-right: 0;
+    padding-inline: 1rem;
   }
 }
 
