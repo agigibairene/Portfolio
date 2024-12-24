@@ -12,7 +12,7 @@
   color: #fff;
 }
 
-.title {
+#about .title {
   color: var(--color-text);
   font-size: 1rem;
   font-weight: 700;
