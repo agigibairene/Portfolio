@@ -4,6 +4,7 @@ import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { FaArrowDown } from "react-icons/fa6";
 import resumePdf from "/resume.pdf";
 import useDownLoadResume from "../hooks/useDownLoadResume";
+import { IoDocumentTextOutline } from "react-icons/io5";
 
 export default function Home(){
 
@@ -19,8 +20,8 @@ export default function Home(){
                         mobile development
                     </p>
                     <div className="btns">
-                        <button onClick={handleDownload} className="resume download">
-                            Download <FaArrowDown className="arrow-icon"/>
+                        <button onClick={handleDownload} className="resume download ">
+                        Resume <IoDocumentTextOutline className="arrow-icon"/>
                         </button>
                         <Link to="#" className="get-intouch">Contact me</Link>
                     </div>

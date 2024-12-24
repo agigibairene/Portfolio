@@ -5,10 +5,11 @@ import { useTheme } from "./hooks/useTheme";
 
 import About from "./Components/About";
 import Home from "./Components/Home";
-import "./Components/style.css"
+import "./styles/style.css"
 import ScrollToTop from "./utils/scrollToTop";
 import Skills from "./Components/Skills";
 import Contact from "./Components/Contact";
+import AboutMe from "./Components/AboutMe";
 
 function App() {
   const [theme, setTheme] = useTheme("theme", "dark");
@@ -29,6 +30,7 @@ function App() {
       <About />
       <Skills />
       <Contact />
+      <AboutMe />
     </section>
   )
 }

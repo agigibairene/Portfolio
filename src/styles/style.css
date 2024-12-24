@@ -235,6 +235,7 @@ h1{
 }
 
 .btns{
+    display: flex;
     margin-top: 1rem;
 }
 
@@ -489,7 +490,8 @@ h1{
 .row-logo{
     display: flex;
     align-items: center;
-    gap: 2rem;
+    flex-wrap: wrap;
+    gap: 1.5rem;
     justify-content: center;
     margin-block: 2rem;
     margin-top: 2rem;
@@ -502,8 +504,8 @@ h2{
 .row-logo .tech-card{
     background-color: var(--bg-color);
     border-radius: 0.7rem;
-    width: 80px;
-    height: 80px;
+    width: 100px;
+    height: 100px;
     display: flex;
     box-shadow: var(--box-shadow);
     animation: animate 1.5s infinite;
@@ -531,7 +533,7 @@ h2{
     grid-template-columns: repeat(2, 1fr);
     gap: 2.5rem;
     align-items: center;
-    margin-bottom: 2rem;
+    margin-block: 2rem;
 }
 
 .about-txt {
@@ -545,11 +547,11 @@ h2{
 }
 
 .lottie{
-    height: 380px;
+    height: 500px;
     width: 350px;
 }
 
-.resume.download.resume-doc{
+.resume.download{
     letter-spacing: 2px;
     display: flex;
     align-items: center;
@@ -557,7 +559,7 @@ h2{
     cursor: pointer;
 } 
 
-.resume.download.resume-doc .arrow-icon{
+.resume.download .arrow-icon{
     font-size: 1.5rem;
 }
 

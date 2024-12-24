@@ -1,6 +1,7 @@
 import ContactCard from "../utils/ContactCard";
 import { MdOutlineMarkEmailRead } from "react-icons/md";
 import { FaLinkedinIn } from "react-icons/fa";
+import { IoIosSend } from "react-icons/io";
 import { useState } from "react";
 
 const x  = "bx bx-mail-send contact__card-icon"
@@ -105,7 +106,7 @@ export default function Contact(){
                                 onChange={handleUserInput}
                             ></textarea>
                         </div>
-                        <button>Send Message</button>
+                        <button className="msg">Send Message <IoIosSend className="msg-icon"/></button>
                     </form>
                 </div>
             </div>

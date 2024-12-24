@@ -1,5 +1,5 @@
 import { DotLottieReact } from '@lottiefiles/dotlottie-react';
-import { IoDocumentTextOutline } from "react-icons/io5";
+import data from '../utils/AboutData';
 
 import TechLogo from '../utils/Logo';
 import reactLogo from '/reactjs.svg';
@@ -9,15 +9,12 @@ import expressLogo from '/express.svg';
 import flutter from "/flutter.svg";
 import dart from "/dart.svg";
 import animation from "../assets/Animation.lottie";
-import useDownLoadResume from '../hooks/useDownLoadResume';
-import resumePdf from "/resume.pdf";
 
 
 const logos = [jsLogo, reactLogo, nodejs, expressLogo, flutter, dart];
 
 export default function About(){
 
-    const { handleDownload} = useDownLoadResume(resumePdf)
 
     return(
         <section id="about">
@@ -32,18 +29,22 @@ export default function About(){
                     />
                 </div>
                 <div className="about-txt">
-                    <div>
-                    It is a long established fact that a reader will be distracted by 
-                    the readable content of a page when looking at its layout. 
-                    The point of using Lorem Ipsum is that it has a more-or-less 
-                    normal distribution of letters, as opposed to using Content here, 
-                    content here, making it look like readable English. Many desktop 
-                    publishing packages and web page editors now use Lorem Ipsum as their 
-                    default model text, and a search for lorem ipsum will uncover many.
-                    </div>
-                    <button onClick={handleDownload} className="resume download resume-doc ">
-                        Resume <IoDocumentTextOutline className="arrow-icon"/>
-                    </button>
+                    <ul className="aboutItems">
+                        {
+                            data.map(item =>{
+                                const {icon, description, title} = item;
+                                return(
+                                    <li key={icon} className="aboutItem">
+                                        {icon}
+                                        <div className="aboutItemText">
+                                            <h3>{title}</h3>
+                                            <p>{description}</p>
+                                        </div>
+                                    </li>
+                                )
+                            })
+                        }
+                    </ul>
                 </div>
             </div>
 
