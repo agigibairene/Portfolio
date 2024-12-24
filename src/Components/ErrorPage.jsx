@@ -12,7 +12,6 @@ export default function ErrorPage(){
         <section id="error-page">
             <div className="content">
                 <div className="err-image">
-                    {/* <img src={errorImage} alt="" /> */}
                     <DotLottieReact
                         src={errorImg}
                         loop

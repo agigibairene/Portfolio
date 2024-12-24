@@ -1,11 +1,17 @@
 /* eslint-disable react/prop-types */
 
-import { LuBadgeCheck } from "react-icons/lu"; // Importing icon from react-icons
-import '../styles/skills.css'; // CSS file for styling
+import { LuBadgeCheck } from "react-icons/lu"; 
+import '../styles/skills.css';
+import { motion } from "framer-motion";
 
 const SkillsCard = ({ title, skills }) => {
     return (
-        <div className="skills-card">
+        <motion.div 
+            initial={{opacity: 0, scale: 0.5}}
+            whileInView={{opacity: 1, scale:1}}
+            transition={{type: "spring", stiffness: 15, delay: 0.2}}
+            className="skills-card"
+        >
             <h3 className="skills-card__title">{title}</h3>
             <div className="skills-card__grid">
                 {skills.map((skill, index) => (
@@ -18,7 +24,7 @@ const SkillsCard = ({ title, skills }) => {
                     </div>
                 ))}
             </div>
-        </div>
+        </motion.div>
     );
 };
 

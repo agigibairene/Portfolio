@@ -4,7 +4,8 @@ import {FaMoon, FaBars, FaSun, FaTimes} from 'react-icons/fa'
 import { useEffect, useState } from "react";
 import { FaCode } from "react-icons/fa";
 import { useRef } from "react";
-import { delay, motion } from "framer-motion";
+import { motion } from "framer-motion";
+import { container } from "../utils/Animations";
 
 
 import resume from "/resume.pdf";
@@ -17,20 +18,6 @@ const links = [
     { path: "/contact", label: "Contact", name: "contact" },
 ];
 
-const container = (delay) =>({
-    hidden: {
-        opacity: 0,
-        x : -100
-    },
-    show: {
-        opacity: 1,
-        x: 0,
-        transition: {
-            duration: 0.4,
-            delay: delay
-        }
-    }
-})
 
 export default function Header({toggleTheme, theme}){
 

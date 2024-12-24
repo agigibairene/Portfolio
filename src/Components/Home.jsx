@@ -5,6 +5,7 @@ import resumePdf from "/resume.pdf";
 import useDownLoadResume from "../hooks/useDownLoadResume";
 import { IoDocumentTextOutline } from "react-icons/io5";
 import { motion } from "framer-motion";
+import { FaPhoneAlt } from "react-icons/fa";
 
 export default function Home(){
 
@@ -43,7 +44,9 @@ export default function Home(){
                         <button onClick={handleDownload} className="resume download ">
                         Resume <IoDocumentTextOutline className="arrow-icon"/>
                         </button>
-                        <Link to="/contact" className="get-intouch">Contact me</Link>
+                        <Link to="/contact" className="get-intouch">
+                            Contact me <FaPhoneAlt className="phone"/>
+                        </Link>
                     </motion.div>
                 </div>
                  <div className="profile-img">

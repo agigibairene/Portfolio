@@ -3,6 +3,7 @@ import data from '../utils/AboutData';
 import "../styles/about.css";
 import { motion } from 'framer-motion';
 
+import { fadeUp } from '../utils/Animations';
 import TechLogo from '../utils/Logo';
 import reactLogo from '/reactjs.svg';
 import jsLogo from '/javascript.png';
@@ -28,18 +29,19 @@ export default function About(){
                         loop
                         autoplay
                         className='lottie'
+
                     />
                 </div>
                 <div className="about-txt">
                     <ul className="aboutItems">
                         {
-                            data.map(item =>{
+                            data.map((item, index) =>{
                                 const {icon, description, title} = item;
                                 return(
                                     <motion.li 
-                                        initial={{opacity:0, x:100}}
-                                        whileInView={{opacity:1, x:0}}
-                                        transition={{duration:1, delay:0.2}}
+                                        variants={fadeUp(0.2*index)}
+                                        initial={"hidden"}
+                                        whileInView={"show"}
                                         key={icon} className="aboutItem">
                                         {icon}
                                         <div className="aboutItemText">
