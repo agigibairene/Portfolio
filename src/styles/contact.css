@@ -19,7 +19,8 @@
     text-align: center;
     font-size: 1rem;
     font-weight: 500;
-    margin-bottom: 1rem
+    margin-bottom: 1rem;
+    color: var(--text-color);
 }
 
 .contact__info {

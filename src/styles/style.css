@@ -543,7 +543,7 @@ h2{
 }
 
 .row-logo .tech-card{
-    background-color: var(--bg-color);
+    background-color: var(--card-color);
     border-radius: 0.7rem;
     width: 100px;
     height: 100px;
@@ -555,6 +555,11 @@ h2{
 .row-logo .tech-card img{
     margin: auto;
     object-fit: contain;
+    transition: filter 0.3s ease;
+}
+
+.row-logo .tech-card img.toggled {
+    filter: brightness(0) invert(1); 
 }
 
 @keyframes animate {
@@ -705,8 +710,7 @@ input, textarea{
     }
 }
 
-
-.scroll-to-top{
+.rounded{
     height: 55px;
     width: 55px;
     border-radius: 50%;
@@ -717,3 +721,17 @@ input, textarea{
     color: #fff;
     justify-content: center;
 }
+
+.scroll-to-top{
+    height: 55px !important;
+    width: 55px !important;
+    border-radius: 50% !important;
+    padding: 1rem !important;
+    display: flex !important;
+    align-items: center !important;
+    background-color: #00abf0 !important;
+    color: #fff !important;
+    justify-content: center !important;
+}
+
+

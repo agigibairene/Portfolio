@@ -30,12 +30,12 @@ function App() {
       <ScrollTop />
       <Home />
       <About />
+      <Education />
       <Skills />
       <Contact />
-      <Education />
       <ScrollToTop
         smooth
-        
+        className="rounded"
         component={<FaArrowUp style={{ color: '#fff', fontSize: '500px' }} />}
       />
     </section>

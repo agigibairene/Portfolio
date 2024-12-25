@@ -29,7 +29,7 @@ const experience = [
     }
 ]
 
-const Education = () => {
+export default function Education(){
     return (
       <section id='education' className='education-section'>
         <div className='education-container'>
@@ -69,6 +69,5 @@ const Education = () => {
         </div>
       </section>
     )
-  }
+}
   
-  export default Education;
