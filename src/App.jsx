@@ -11,6 +11,7 @@ import "./styles/style.css"
 import ScrollTop from "./utils/scrollTop";
 import Skills from "./Components/Skills";
 import Contact from "./Components/Contact";
+import Education from "./Components/Experience";
 
 function App() {
   const [theme, setTheme] = useTheme("theme", "light");
@@ -31,10 +32,10 @@ function App() {
       <About />
       <Skills />
       <Contact />
+      <Education />
       <ScrollToTop
         smooth
-        height="80px"
-        width="80px"
+        
         component={<FaArrowUp style={{ color: '#fff', fontSize: '500px' }} />}
       />
     </section>

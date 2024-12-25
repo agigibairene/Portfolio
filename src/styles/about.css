@@ -1,4 +1,4 @@
-
+@import url("./style.css");
 
 .about-container {
   position: relative;
@@ -10,6 +10,10 @@
   margin-left: 10%;
   margin-right: 10%;
   color: #fff;
+}
+
+#about h2{
+  font-size: 2rem;
 }
 
 #about .title {
@@ -44,10 +48,7 @@
   border-radius: 20px;
   list-style: none;
   padding: 1.5rem;
-  background-color: #ffffff;
-  /* background: #19376d;
-  background: linear-gradient(90deg, #324b79 0%, rgba(25, 55, 109, 0) 100%); */
-
+  background-color: var(--card-color);
   background-size: 0 100%;
   background-repeat: no-repeat;
   transition: 0.4s;
@@ -58,18 +59,18 @@
 .aboutItem .about-icon {
   font-size: 2rem;
   margin-right: 1rem;
-  /* color: #00abf0;; */
+  color: #00abf0;;
 }
 
 .aboutItem h3 {
   font-size: 1rem;
   font-weight: 600;
-  color: #00abf0;;
+  color: #00abf0;
 }
 
 .aboutItem p {
   font-size: 1rem;
-  color: #000;
+  color: var(--card-text-color);
 }
 
 @media screen and (max-width: 830px) {

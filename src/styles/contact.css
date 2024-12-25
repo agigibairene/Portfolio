@@ -1,25 +1,4 @@
-:root{
-    --bg-color: hsl(0, 0%, 98%);
-    --text-color: #000;
-    --icon-color: #000;
-    --special-color: #00abf0;
-    --btn-color: #fff;
-    --dropdown-bgColor: #081b29;
-    --dropdown-textColor: #fff;
-    --bottom: #00abf0;
-    --box-shadow: #00000040 .121875rem .121875rem .1625rem;
-}
-
-[data-theme = "dark"]{
-    --btn-color: #fff;
-    --bg-color: #081b29;
-    --text-color: #fff;
-    --icon-color: #fff;
-    --btn-hoverTextColor: #fff;
-    --dropdown-bgColor: rgba(255,255,255, 0.1);
-    --dropdown-textColor: #fff;
-    --bottom: #fff;
-}
+@import url("./style.css");
 
 .section {
     padding: 2rem 4rem;
@@ -50,7 +29,7 @@
 }
 
 .contact__card {
-    background-color: white;
+    background-color: var(--card-color);
     border: 1px solid rgba(0,0,0,.1);
     padding: 1rem;
     border-radius: .75rem;
@@ -213,7 +192,7 @@
     padding: 0.75rem 1.4rem;
     cursor: pointer;
     border-radius: 0.4rem;
-    background-color: var(--bottom);
+    background-color: var(--special-color);
     color: var(--btn-color);
     font-size: 1rem;
     box-shadow: var(--box-shadow);

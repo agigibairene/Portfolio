@@ -1,0 +1,105 @@
+@import url("./style.css");
+
+
+.education-section {
+    padding: 4rem 4rem; 
+}
+
+.education-container {
+    max-width: 80rem; 
+    margin: 0 auto; 
+}
+
+.education-title {
+    font-size: 2.25rem; 
+    font-weight: 800; 
+    text-align: center;
+    color: var(--special-color);
+    margin-bottom: 3rem; 
+}
+
+.grid {
+    display: grid;
+    gap: 3rem; 
+}
+
+/* Responsive grid layout */
+@media (min-width: 768px) {
+    .grid {
+        grid-template-columns: repeat(2, 1fr); 
+    }
+}
+
+.section-title {
+    font-size: 1.875rem; 
+    font-weight: 600;
+    color: var(--text-color); 
+    margin-bottom: 1.5rem; 
+}
+
+.card {
+    display: flex;
+    align-items: flex-start;
+    background-color: var(--card-color); 
+    margin-bottom: 1rem;
+    padding: 1.5rem; 
+    color: var( --card-text-color);
+    border-radius: 0.75rem; 
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+    transition: transform 0.2s, box-shadow 0.2s; 
+
+}
+
+.card:hover {
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2); 
+    transform: translateY(-0.5rem);
+}
+
+.icon {
+    font-size: 2.5rem; 
+    margin-right: 1.5rem;
+    color: #3b82f6; 
+}
+
+.degree {
+    font-size: 1.25rem;
+    font-weight: bold; 
+}
+
+.institution,
+.year,
+.description {
+    color: var( --card-text-color) 
+}
+
+.year {
+    font-style: italic; 
+    font-size: small; 
+}
+
+.mt-2 {
+    margin-top: 0.5rem; 
+}
+
+/* Media Queries for Responsiveness */
+
+@media (max-width: 768px) {
+    .education-title {
+        font-size: 2rem; 
+        margin-bottom: 2rem;
+    }
+
+    .section-title {
+        font-size: 1.5rem;
+        margin-bottom: 1rem;
+    }
+
+    .degree {
+        font-size: 1.125rem; 
+    }
+
+    .icon {
+        font-size: 2rem; 
+        margin-right: 1rem;
+    }
+}

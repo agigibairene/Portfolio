@@ -57,7 +57,7 @@ export default function About(){
             </div>
 
             <div className="tech-stack">
-                <h2>My tech Stack</h2>
+                <h2>My Tech Stack</h2>
                 <div className="row-logo">
                    {
                     logos.map((logo, index) => 
