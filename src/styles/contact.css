@@ -5,6 +5,12 @@
    
 }
 
+.contact__content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 .contact__container {
     grid-template-columns: repeat(2,max-content);
     justify-content: center;
@@ -16,10 +22,11 @@
 }
 
 .contact__title {
-    text-align: center;
+    text-align: center !important;
     font-size: 1rem;
     font-weight: 500;
     margin-bottom: 1rem;
+    margin-inline: auto;
     color: var(--text-color);
 }
 
@@ -47,10 +54,12 @@
 .contact__card-title,.contact__card-data {
     font-size: 0.813rem;
     margin-bottom: .2rem;
+    
 }
 
 .contact__card-title {
     font-weight: 500;
+    
 }
 
 .contact__card-data {
@@ -92,13 +101,15 @@
     left: 0;
     width: 100%;
     height: 100%;
-    border: 2px solid rgba(0,0,0,.3);
+    border: var(--border-color);
     background: none;
     color: var(--text-color);
     outline: none;
     border-radius: .75rem;
     padding: 1.5rem;
-    z-index: 1
+    z-index: 1;
+    font-size: 0.9rem;
+    background-color: var(--input-bg);
 }
 
 
