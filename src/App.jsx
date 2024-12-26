@@ -9,6 +9,7 @@ import Skills from "./Components/Skills";
 import Contact from "./Components/Contact";
 import Experience from "./Components/Experience"; 
 import "./styles/style.css";
+import Footer from "./Components/Footer";
 
 function App() {
   const about = useRef();
@@ -37,6 +38,7 @@ function App() {
       <div ref={experiences}><Experience /></div>
       <div ref={skills}><Skills /></div>
       <div ref={contact}><Contact /></div>
+      <Footer />
       <ScrollToTop
         smooth
         className="rounded"
