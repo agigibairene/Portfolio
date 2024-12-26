@@ -18,8 +18,9 @@ export default function Home(){
                     <motion.h1 initial={{opacity:0, x:-100}}
                         whileInView={{opacity:1, x:0}}
                         transition={{duration:1, delay:0.2}}>
-                    <span className="title">Hiii Everyone 
-                        <span className="wave-icon"><span className="wave">👋</span>🥰</span></span>
+                    <span className="title">Hiii
+                        <span className="wave-icon wave">👋</span>,  I&apos;m
+                    </span>
                             Irene Akawin Agigiba
                     </motion.h1>
                     <motion.p 
