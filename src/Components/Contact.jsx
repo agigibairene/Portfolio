@@ -4,6 +4,7 @@ import { MdOutlineMarkEmailRead } from "react-icons/md";
 import { FaLinkedinIn } from "react-icons/fa";
 import { IoIosSend } from "react-icons/io";
 import { useState } from "react";
+import checkValidData from "../utils/validate";
 
 const x  = "bx bx-mail-send contact__card-icon"
 const data = [
@@ -29,9 +30,18 @@ export default function Contact({ref}){
         message: ""
     });
 
+    const [errors, setErrors] = useState({});
+    
+    function validateInputs(){
+        const  {emailRegex, msgRegex, fullNameRegex} = checkValidData(userInput);
+        setErrors({
+            email: emailRegex ? "" : "Invalid email format.",
+            message: msgRegex ? "" : "Message must not be empty.",
+            name: fullNameRegex ? "" : "Full Name is required."
+        });
+    }
 
     function handleUserInput(event){
-        event.preventDefault();
         const {name, value} = event.target;
         setUserInput(prevData => (
             {
@@ -43,7 +53,10 @@ export default function Contact({ref}){
 
     function handleSubmit(event){
         event.preventDefault();
+        validateInputs()
     }
+
+    console.log(errors);
 
 
     return(
@@ -84,6 +97,7 @@ export default function Contact({ref}){
                                 value={userInput.name}
                                 onChange={handleUserInput}
                             />
+                            {errors.name && <p className="error">{errors.name}</p>}
                         </div>
 
                         <div className="contact__form-div">
@@ -95,6 +109,7 @@ export default function Contact({ref}){
                                 value={userInput.email}
                                 onChange={handleUserInput}
                             />
+                            {errors.email && <p className="error">{errors.email}</p>}
                         </div>
 
                         <div className="contact__form-div contact__form-area">
@@ -108,6 +123,7 @@ export default function Contact({ref}){
                                 value={userInput.message}
                                 onChange={handleUserInput}
                             ></textarea>
+                            {errors.message && <p className="error">{errors.message}</p>}
                         </div>
                         <button className="msg">Send Message <IoIosSend className="msg-icon"/></button>
                     </form>

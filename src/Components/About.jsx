@@ -1,5 +1,4 @@
 /* eslint-disable react/prop-types */
-import { useRef } from 'react';
 import { DotLottieReact } from '@lottiefiles/dotlottie-react';
 import data from '../utils/AboutData';
 import "../styles/about.css";

@@ -227,3 +227,9 @@
 .msg:hover .msg-icon {
     transform: translateY(-0.2rem);
 }
+
+
+.error{
+    display: block;
+    color: red;
+}
