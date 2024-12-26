@@ -5,6 +5,11 @@
    
 }
 
+.section__title {
+    color: var(--special-color);
+    font-size: 2rem;
+}
+
 .contact__content{
     display: flex;
     flex-direction: column;

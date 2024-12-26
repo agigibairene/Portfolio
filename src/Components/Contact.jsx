@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import ContactCard from "../utils/ContactCard";
 import { MdOutlineMarkEmailRead } from "react-icons/md";
 import { FaLinkedinIn } from "react-icons/fa";
@@ -20,12 +21,14 @@ const data = [
     }
 ];
 
-export default function Contact(){
+export default function Contact({ref}){
+
     const [userInput, setUserInput] = useState({
         name: "",
         email: "",
         message: ""
     });
+
 
     function handleUserInput(event){
         event.preventDefault();
@@ -44,7 +47,7 @@ export default function Contact(){
 
 
     return(
-        <section className="contact section" id="contact">
+        <section className="contact section" id="contact" ref={ref}>
             <h2 className="section__title">~ Get In Touch ~</h2>
 
             <div className="contact__container container grid">

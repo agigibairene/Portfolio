@@ -1,3 +1,5 @@
+/* eslint-disable react/prop-types */
+import { useRef } from 'react';
 import { DotLottieReact } from '@lottiefiles/dotlottie-react';
 import data from '../utils/AboutData';
 import "../styles/about.css";
@@ -16,10 +18,9 @@ import animation from "../assets/Animation.lottie";
 
 const logos = [jsLogo, reactLogo, nodejs, expressLogo, flutter, dart];
 
-export default function About(){
-
+export default function About({ref}){
     return(
-        <section id="about">
+        <section id="about" ref={ref}>
             <h2>~ About me ~</h2>
             <div className="about-me">
                 <div className="mini-image">

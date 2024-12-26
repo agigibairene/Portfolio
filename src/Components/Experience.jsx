@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import "../styles/educ.css";
 
 const education = [
@@ -29,9 +30,10 @@ const experience = [
     }
 ]
 
-export default function Education(){
+export default function Experience({ref}){
+
     return (
-      <section id='education' className='education-section'>
+      <section id='experiences' className='education-section' ref={ref}>
         <div className='education-container'>
           <h2 className='education-title'>School & Learning Chronicles</h2>
           <div className='grid md:grid-cols-2'>

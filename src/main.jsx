@@ -5,17 +5,14 @@ import App from './App.jsx';
 import Home from './Components/Home.jsx';
 import About from './Components/About.jsx';
 import ErrorPage from './Components/ErrorPage.jsx';
-import ScrollToTop from './utils/scrollTop.jsx';
 import Contact from './Components/Contact.jsx';
+import Experience from './Components/Experience.jsx';
 
 const appRouter = createBrowserRouter([
   { path: '/',
     element: (
-      <>
-        <ScrollToTop />
         <App />
-      </>
-    ),
+      ),
     errorElement: <ErrorPage />,
     children: [
       { path: "/",
@@ -28,6 +25,10 @@ const appRouter = createBrowserRouter([
           {
             path: "/about",
             element: <About />,
+          },
+          {
+            path: "/experience",
+            element: <Experience />
           },
           {
             path: "/contact",

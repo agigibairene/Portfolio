@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 /* eslint-disable react/prop-types */
 import { NavLink } from "react-router-dom";
 import {FaMoon, FaBars, FaSun, FaTimes} from 'react-icons/fa'
@@ -13,20 +14,33 @@ import resume from "/resume.pdf";
 const links = [
     { path: "/", label: "Home", name: "home"},
     { path: "/about", label: "About Me", name: "about" },
-    { path: "/skills", label: "Skills", name: "skills" },
+    { path: "/experience", label: "Experience", name: "experiences" },
     { path: "/projects", label: "Projects", name: "projects" },
     { path: "/contact", label: "Contact", name: "contact" },
 ];
 
 
-export default function Header({toggleTheme, theme}){
+export default function Header({toggleTheme, theme, refs}){
 
     const [toggle, setToggle] = useState(false);
     const [isActive, setIsActive] = useState(false);
     const refDropdownContainer = useRef();
     const navLinks = useRef();
 
+   
 
+    const scrollToSection = (name) => {
+        const elementRef = refs[name];
+        if (elementRef && elementRef.current) {
+            window.scrollTo({
+                top: elementRef.current.offsetTop - 120 , 
+                behavior: 'smooth'
+            });
+        }
+        setToggle(false);
+    };
+
+    
     useEffect(() => {
         const handleScroll = () =>{
             setIsActive(window.scrollY > 50)
@@ -66,17 +80,19 @@ export default function Header({toggleTheme, theme}){
                 <ul className="nav-links">
                     {
                         links.map((item, index) => {
-                            const { path, label, name } = item
+                            const { path, label} = item
                             return <motion.li key={path} 
                                 variants={container(0.2*index)}
                                 initial="hidden"
                                 whileInView={"show"}
-                                onClick={() => document.getElementById(name).scrollIntoView({ behavior: 'smooth' })}>
-                                <NavLink className={({ isActive }) => (isActive ? "active" : "")} to={path}>
+                                onClick={() => scrollToSection(item.name)}>
+                                <NavLink 
+                                    className={({ isActive }) => (isActive ? "active" : "")} to={path}
+                                >
                                     {label}
                                 </NavLink>
                             </motion.li>
-})
+                            })
                     }
                 </ul>
                 <div className="nav-right" onClick={toggleSideMenu}>
@@ -92,7 +108,7 @@ export default function Header({toggleTheme, theme}){
                 <ul className="nav-links" ref={navLinks}>
                     {
                         links.map(({ path, label, name }) => (
-                            <li key={path} onClick={() => document.getElementById(name).scrollIntoView({ behavior: 'smooth' })}>
+                            <li key={path} onClick={() => scrollToSection(name)} >
                                 <NavLink className={({ isActive }) => (isActive ? "active" : "")} to={path}>
                                     {label}
                                 </NavLink>

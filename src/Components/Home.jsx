@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import { Link } from "react-router-dom";
 import profileImg from "../assets/profile.jpg";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
@@ -7,12 +8,12 @@ import { IoDocumentTextOutline } from "react-icons/io5";
 import { motion } from "framer-motion";
 import { FaPhoneAlt } from "react-icons/fa";
 
-export default function Home(){
+export default function Home({ref}){
 
     const {handleDownload} = useDownLoadResume(resumePdf);
     
     return(
-        <section id="homepage">
+        <section id="homepage" ref={ref}>
             <div id="home-content">
                 <div className="home-text">
                     <motion.h1 initial={{opacity:0, x:-100}}
