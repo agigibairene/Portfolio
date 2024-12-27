@@ -78,11 +78,11 @@ export default function Contact({ ref }) {
                 }
 
                 // Automatically close the modal after 3 seconds
-                // setTimeout(() => {
-                //     if (modalRef.current) {
-                //         modalRef.current.closeModal();
-                //     }
-                // }, 3000);
+                setTimeout(() => {
+                    if (modalRef.current) {
+                        modalRef.current.closeModal();
+                    }
+                }, 2000);
 
                 // Clear the form
                 setUserInput({ name: "", email: "", message: "" });
