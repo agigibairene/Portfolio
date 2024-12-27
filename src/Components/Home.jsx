@@ -8,9 +8,11 @@ import { IoDocumentTextOutline } from "react-icons/io5";
 import { motion } from "framer-motion";
 import { FaPhoneAlt } from "react-icons/fa";
 
-export default function Home({ref}){
+export default function Home({ref, scrollToContact}){
 
     const {handleDownload} = useDownLoadResume(resumePdf);
+
+ 
     
     return(
         <section id="homepage" ref={ref}>
@@ -49,7 +51,7 @@ export default function Home({ref}){
                         <button onClick={handleDownload} className="resume download ">
                         Resume <IoDocumentTextOutline className="arrow-icon"/>
                         </button>
-                        <Link to="/contact" className="get-intouch">
+                        <Link onClick={scrollToContact} className="get-intouch">
                             Contact me <FaPhoneAlt className="phone"/>
                         </Link>
                     </motion.div>

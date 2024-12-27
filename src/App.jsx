@@ -20,7 +20,7 @@ function App() {
 
   const refs = { about, home, skills, contact, experiences };
 
-  const [theme, setTheme] = useTheme("theme", "light");
+  const [theme, setTheme] = useTheme("theme", "dark");
 
   useEffect(() => {
     document.body.setAttribute("data-theme", theme);
@@ -30,10 +30,19 @@ function App() {
     setTheme(theme === "light" ? "dark" : "light");
   }
 
+  const scrollToContact = () => {
+    if (contact.current) {
+        window.scrollTo({
+            top: contact.current.offsetTop - 120,
+            behavior: 'smooth'
+        });
+    }
+  };
+
   return (
     <section id="home">
       <Header refs={refs} toggleTheme={toggleTheme} theme={theme} />
-      <div ref={home}><Home /></div>
+      <div ref={home} ><Home scrollToContact={scrollToContact}/></div>
       <div ref={about}><About /></div>
       <div ref={experiences}><Experience /></div>
       <div ref={skills}><Skills /></div>

@@ -15,7 +15,7 @@ const data = [
         logo: <MdOutlineMarkEmailRead className={x} />,
         name: "Email",
         detail: "agigibaakawin@gmail.com",
-        link: "#"
+        link: "mailto:someone@example.com"
     },
     {
         logo: <FaLinkedinIn className={x} />,

@@ -33,7 +33,7 @@ export default function Header({toggleTheme, theme, refs}){
         const elementRef = refs[name];
         if (elementRef && elementRef.current) {
             window.scrollTo({
-                top: elementRef.current.offsetTop - 120 , 
+                top: elementRef.current.offsetTop - 90 , 
                 behavior: 'smooth'
             });
         }
@@ -123,3 +123,4 @@ export default function Header({toggleTheme, theme, refs}){
         </header>
     )
 }
+
