@@ -95,13 +95,11 @@
 }
 
 .contact__form-div {
-    position: relative;
-    margin-bottom: 2rem;
-    height: 4rem
+    margin-bottom: 4rem;
+    height: 2rem
 }
 
 .contact__form-input {
-    position: absolute;
     top: 0;
     left: 0;
     width: 100%;
@@ -216,6 +214,8 @@
     display: flex;
     align-items: center;
     transition: background-color 0.3s ease;
+    font-weight: 500;
+    margin-top: 1rem;
 }
 
 .msg .msg-icon{
@@ -228,8 +228,80 @@
     transform: translateY(-0.2rem);
 }
 
-
-.error{
-    display: block;
+.error {
     color: red;
+    font-size: 0.8rem;
+    margin-bottom: 2rem;
+}
+
+
+
+/* Modal Popup Style */
+.dialogBox {
+    padding: 2rem 1.5rem;
+    border: 0;
+    border-radius: 0.4rem;
+    background-color: #fff;
+    gap: 2rem;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    outline: 0;
+    width: 50%; 
+    max-width:380px; 
+}
+
+
+dialog::backdrop {
+    background: rgba(0, 0, 0, 0.75);
+}
+
+
+dialog h4 {
+    display: flex;
+    align-items: center;
+    /* gap: 0.8rem; */
+    font-size: 1.5rem;
+    text-align: center; 
+}
+
+
+.dialog-btn {
+    padding: 0.5rem 1.5rem !important;
+    outline: none;
+    border: 0;
+    border-radius: 0.3rem;
+    background-color: #0f283a;
+    color: white;
+    margin: 2rem auto 0; 
+    cursor: pointer;
+    display: block; 
+    text-align: center;
+    font-size: 0.9rem;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .dialogBox {
+        width: 65%; 
+        padding: 1.5rem 2rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .dialogBox {
+        width: 50%; 
+        padding: 1rem 1.5rem; 
+    }
+
+    dialog h4 {
+        font-size: 1.2rem;
+    }
+
+    .dialog-btn {
+        padding: 0.5rem 1rem; 
+    }
 }
