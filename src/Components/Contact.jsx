@@ -7,6 +7,7 @@ import { useRef, useState } from "react";
 import checkValidData from "../utils/validate";
 import Modal from "../utils/Modal";
 import emailjs from "emailjs-com";
+import { motion } from "framer-motion";
 
 
 const x = "bx bx-mail-send contact__card-icon";
@@ -119,7 +120,13 @@ export default function Contact({ ref }) {
                 <div className="contact__content">
                     <h3 className="contact__title">Text me</h3>
 
-                    <form onSubmit={handleSubmit} className="contact__form">
+                    <motion.form 
+                        initial={{opacity:0, x:100}}
+                        whileInView={{opacity:1, x:0}}
+                        transition={{duration:1, delay:0.2}}
+                        onSubmit={handleSubmit} 
+                        className="contact__form"
+                    >
                         <Modal message="Sent Successfully" ref={modalRef} />
                         <div className="contact__form-div">
                             <input
@@ -164,7 +171,7 @@ export default function Contact({ ref }) {
                         >
                             Send Message <IoIosSend className="msg-icon" />
                         </button>
-                    </form>
+                    </motion.form>
                 </div>
             </div>
         </section>
