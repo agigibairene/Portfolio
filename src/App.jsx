@@ -43,7 +43,7 @@ function App() {
     <section id="home">
       <Header refs={refs} toggleTheme={toggleTheme} theme={theme} />
       <div ref={home} ><Home scrollToContact={scrollToContact}/></div>
-      <div ref={about}><About /></div>
+      <div ref={about}><About theme={theme}/></div>
       <div ref={experiences}><Experience /></div>
       <div ref={skills}><Skills /></div>
       <div ref={contact}><Contact /></div>

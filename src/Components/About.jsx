@@ -8,16 +8,17 @@ import { fadeUp } from '../utils/Animations';
 import TechLogo from '../utils/Logo';
 import reactLogo from '/reactjs.svg';
 import jsLogo from '/javascript.png';
-import nodejs from '/node-js.svg';
-import expressLogo from '/express.svg';
 import flutter from "/flutter.svg";
 import dart from "/dart.svg";
 import animation from "../assets/Animation.lottie";
+import python from "/python.svg";
+import django from "/django.svg";
+import tailwind from "/tailwind.svg";
 
 
-const logos = [jsLogo, reactLogo, nodejs, expressLogo, flutter, dart];
+const logos = [jsLogo, reactLogo, python, django, flutter, dart, tailwind];
 
-export default function About({ref}){
+export default function About({ref, theme}){
     return(
         <section id="about" ref={ref}>
             <h2>~ About me ~</h2>
@@ -64,6 +65,7 @@ export default function About({ref}){
                             key={logo} 
                             imagePath={logo} 
                             styles={{ animationDelay: `${index * 0.5}s` }}
+                            theme={theme}
                         />)
                    }
                 </div>

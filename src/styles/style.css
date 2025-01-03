@@ -10,13 +10,13 @@
     --dropdown-bgColor: #081b29;
     --dropdown-textColor: #fff;
     --bottom: #00abf0;
-    /* --box-shadow: #00000040 .121875rem .121875rem .1625rem; */
     --box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.25);
     --card-color: #fff;
     --card-text-color: #000;
     --border-color: 1px solid rgba(0,0,0,.3);
     --input-bg:  hsl(0, 0%, 98%);
     --footer-border: 0.5px solid rgba(0,0,0,.3);
+    --svg-color: #000;
 }
 
 [data-theme = "dark"]{
@@ -33,6 +33,7 @@
     --border-color: 1px solid rgb(209 213 219);
     --input-bg: rgb(3, 7, 18);
     --footer-border: 0.5px solid rgb(209 213 219);
+    --svg-color: #fff;
 }
 
 html{
@@ -570,8 +571,8 @@ h2{
 .row-logo .tech-card{
     background-color: var(--card-color);
     border-radius: 0.7rem;
-    width: 100px;
-    height: 100px;
+    width: 90px;
+    height: 90px;
     display: flex;
     box-shadow: var(--box-shadow);
     animation: animate 1.5s infinite;

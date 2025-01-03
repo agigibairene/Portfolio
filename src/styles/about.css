@@ -98,3 +98,7 @@
   }
 }
 
+
+.tech-card svg {
+  fill: var(--svg-color);
+}

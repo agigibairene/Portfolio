@@ -10,10 +10,6 @@ export const backend = [
     {
         name: "SQL",
         level: "Beginner"
-    },
-    {
-        name: "Firebase",
-        level: "Beginner"
     }
 ]
 
@@ -37,7 +33,7 @@ export const frontend = [
     },
     {
         name: "Flutter",
-        level: "Intermediate"
+        level: "Beginner"
     }
 ]
 
