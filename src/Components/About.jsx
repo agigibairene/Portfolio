@@ -14,9 +14,10 @@ import animation from "../assets/Animation.lottie";
 import python from "/python.svg";
 import django from "/django.svg";
 import tailwind from "/tailwind.svg";
+import typescript from "/typescript.svg";
 
 
-const logos = [jsLogo, reactLogo, python, django, flutter, dart, tailwind];
+const logos = [jsLogo, reactLogo, typescript,  tailwind, python, django, flutter, dart];
 
 export default function About({ref, theme}){
     return(
