@@ -283,9 +283,9 @@ h1{
     position: relative;
     padding: 5px 0;
     margin-left: 3rem;
-  }
+}
   
-  .get-intouch::after {
+.get-intouch::after {
     content: '';
     position: absolute;
     bottom: -2px; 
@@ -296,22 +296,22 @@ h1{
     transform: scaleX(1); 
     transform-origin: left;
     transition: transform 0.3s ease; 
-  }
+}
   
-  .get-intouch:hover::after {
+.get-intouch:hover::after {
     transform: scaleX(1.1); 
-  }
+}
   
   
-  .phone {
+.phone {
     margin-left: 8px;
     font-size: 1.3rem; 
     transition: transform 0.3s ease;
-  }
+}
   
-  .get-intouch:hover .phone {
+.get-intouch:hover .phone {
     transform: translateX(5px); 
-  }
+}
   
 
 .btns .resume.download{
@@ -419,6 +419,26 @@ h1{
         width: 330px;
         /* height: 220px; */
     }
+}
+
+@media (max-width: 775px) {
+    
+    #home-content{
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+        justify-content: center;
+    } 
+
+    .profile-img{
+        width: 300px;
+        height: 300px;
+    }
+
+    h1, .title, #home-content p{
+        text-align: center;
+    }
+
 }
 
 @media (max-width: 600px) {

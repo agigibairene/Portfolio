@@ -40,7 +40,6 @@ export default function Home({ref, scrollToContact}){
                         I love creating innovative solutions that have a meaningful impact on society. Beyond software,<br/>
                         I’m an agriculture enthusiast 🪴🌿, deeply passionate about the pivotal role farming plays in our lives.<br/>
                         I’m devoted to leveraging technology to make agriculture more efficient, productive, and sustainable.<br/> 
-                        If you&lsquo;re as excited about transforming agriculture through tech as I am, let&apos;s connect!&quot;
                     </motion.p>
                     <motion.div 
                         className="btns"

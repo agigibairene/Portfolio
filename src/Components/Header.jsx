@@ -116,7 +116,7 @@ export default function Header({toggleTheme, theme, refs}){
                         ))
                     }
                     <li>
-                        <NavLink className="resume view" to="/resume">Resume</NavLink>
+                        <a href={resume} className="resume view" to="/resume">Resume</a>
                     </li>
                 </ul>
             </div>
