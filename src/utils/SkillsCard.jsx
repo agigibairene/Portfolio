@@ -1,5 +1,4 @@
 /* eslint-disable react/prop-types */
-
 import { LuBadgeCheck } from "react-icons/lu"; 
 import '../styles/skills.css';
 import { motion } from "framer-motion";

@@ -1,5 +1,3 @@
-
-
 export const fadeUp = (delay) =>({
     hidden: {
         opacity: 0,

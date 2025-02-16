@@ -3,14 +3,14 @@ export const backend = [
         name: "Python",
         level: "Intermediate"
     },
-    {
-        name: "Django",
-        level: "Beginner"
-    },
-    {
-        name: "SQL",
-        level: "Beginner"
-    }
+    // {
+    //     name: "Django",
+    //     level: "Beginner"
+    // },
+    // {
+    //     name: "SQL",
+    //     level: "Beginner"
+    // }
 ]
 
 export const frontend = [

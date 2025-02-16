@@ -12,12 +12,12 @@ import flutter from "/flutter.svg";
 import dart from "/dart.svg";
 import animation from "../assets/Animation.lottie";
 import python from "/python.svg";
-import django from "/django.svg";
+// import django from "/django.svg";
 import tailwind from "/tailwind.svg";
 import typescript from "/typescript.svg";
 
 
-const logos = [jsLogo, reactLogo, typescript,  tailwind, python, django, flutter, dart];
+const logos = [jsLogo, reactLogo, typescript,  tailwind, python, flutter, dart];
 
 export default function About({ref, theme}){
     return(
