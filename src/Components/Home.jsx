@@ -35,7 +35,7 @@ export default function Home({ref, scrollToContact}){
                         initial={{opacity:0, x:-100}}
                         whileInView={{opacity:1, x:0}}
                         transition={{duration:1.4, delay:0.5}}
-                        className="description-home"
+                        className="description-home font-Kumb"
                     >
                         I love creating innovative solutions that have a meaningful impact on society. Beyond software,<br/>
                         I’m an agriculture enthusiast 🪴🌿, deeply passionate about the pivotal role farming plays in our lives.<br/>

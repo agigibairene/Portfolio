@@ -2,6 +2,7 @@ import discoverBooks from "../assets/book-discover.png"
 import netflix from "../assets/netflix.png"
 import portfolio from "../assets/portfolio.png"
 import "../styles/project.css";
+import { MdArrowOutward } from "react-icons/md";
 
 
 const projects = [
@@ -30,31 +31,32 @@ const projects = [
 
 export default function Projects(){
     return(
-       <section>
-            <h2 className="text-center text-3xl mb-6">~ Projects ~</h2>
+       <section id="projects">
+            <h2 className="text-center text-2xl md:text-3xl mb-10">~ Projects ~</h2>
 
-            <div className="flex gap-6 justify-center  px-8">
-            {
-                projects.map(project =>{
-                    const {image, type, name, demo, github} = project;
-                    return <div key={demo} className="w-[24rem] h-[19rem] p-4 rounded-md project pb-8 ">
-                        <img src={image} alt="" className="object-contain rounded-md " />
-                        <div className="flex justify-between px-6 mt-4">
-                            <div>
-                                <a href={github}>
-                                    <p>{name}</p>
-                                </a>
-                                <a href={github}>
-                                    <p>{type}</p>
+            <div className="flex gap-6 justify-center flex-wrap  px-8">
+                {
+                    projects.map(project =>{
+                        const {image, type, name, demo, github} = project;
+                        return <div key={demo} className="w-[24rem] h-[19rem] p-4 rounded-md project pb-8 ">
+                            <img src={image} alt="" className="object-contain rounded-md " />
+                            <div className="flex justify-between px-6 mt-8">
+                                <div>
+                                    <a href={github} target="_blank">
+                                        <p className="project-name">{name}</p>
+                                    </a>
+                                    <a href={github} target="_blank">
+                                        <p className="italic">{type}</p>
+                                    </a>
+                                </div>
+                                <a href={demo} target="_blank" className="flex items-start live">
+                                    <p>Live Demo</p>
+                                    <MdArrowOutward size={25} className="ml-2 projects-arrow"/>
                                 </a>
                             </div>
-                            <a href={demo}>
-                                <p>Live Demo</p>
-                            </a>
                         </div>
-                    </div>
-                })
-            }
+                    })
+                }
         </div>
        </section>
     )

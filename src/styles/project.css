@@ -3,7 +3,6 @@
 .project{
     background-color: var(--card-color); 
     margin-bottom: 1rem;
-    /* padding: 1.5rem;  */
     color: var( --card-text-color);
     border-radius: 0.75rem; 
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
@@ -14,4 +13,21 @@
 .project:hover {
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.25); 
     transform: translateY(-0.5rem);
+}
+
+#projects h2, .project .live .projects-arrow, .live{
+    color: var(--special-color);
+}
+
+.project .live p{
+    color: var(--special-color) !important;
+    font-weight: 600;   
+}
+
+.project .live:hover .projects-arrow{
+    transform: translateY(-5px);
+}
+
+.project-name{
+    font-weight: 600;
 }

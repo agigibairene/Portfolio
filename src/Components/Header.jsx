@@ -69,7 +69,7 @@ export default function Header({toggleTheme, theme, refs}){
         <header>
             <nav  className={isActive ? "opaque" : "" }>
                 <div className="logo">
-                    <h2><FaCode className="code"/> Irene</h2>
+                    <h2 className="text-2xl"><FaCode size={30} className="code"/> Irene</h2>
                     <div className="theme-icon">
                         {
                            theme === "light" ? <FaMoon className="iconType"  onClick={toggleTheme}/> : 
