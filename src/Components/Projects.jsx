@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import discoverBooks from "../assets/book-discover.png"
 import netflix from "../assets/netflix.png"
 import portfolio from "../assets/portfolio.png"
@@ -29,9 +30,9 @@ const projects = [
     }
 ];
 
-export default function Projects(){
+export default function Projects({ref}){
     return(
-       <section id="projects">
+       <section id="projects" ref={ref}>
             <h2 className="text-center text-2xl md:text-3xl mb-10">~ Projects ~</h2>
 
             <div className="flex gap-6 justify-center flex-wrap  px-8">

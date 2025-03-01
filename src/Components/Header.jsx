@@ -90,6 +90,7 @@ export default function Header({toggleTheme, theme, refs}){
                                     className={({ isActive }) => (isActive ? "active" : "")} to={path}
                                 >
                                     {label}
+                                    {console.log(item.name)}
                                 </NavLink>
                             </motion.li>
                             })
