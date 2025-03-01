@@ -17,6 +17,7 @@
     --input-bg:  hsl(0, 0%, 98%);
     --footer-border: 0.5px solid rgba(0,0,0,.3);
     --svg-color: #000;
+    --card-border: 0.1px solid rgba(0,0,0,.3);
 }
 
 [data-theme = "dark"]{
@@ -34,6 +35,7 @@
     --input-bg: rgb(3, 7, 18);
     --footer-border: 0.5px solid rgb(209 213 219);
     --svg-color: #fff;
+    --card-border: 0.1px solid rgb(209 213 219);
 }
 
 html{

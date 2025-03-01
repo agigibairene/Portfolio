@@ -14,7 +14,8 @@ export function useTheme(key, defaultTheme) {
     useEffect(() => {
         try {
             localStorage.setItem(key, JSON.stringify(theme));
-        } catch (err) {
+        } 
+        catch (err) {
             console.error("Error saving theme to localStorage:", err);
         }
     }, [key, theme]);

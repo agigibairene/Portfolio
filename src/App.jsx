@@ -10,6 +10,7 @@ import Contact from "./Components/Contact";
 import Experience from "./Components/Experience"; 
 import "./styles/style.css";
 import Footer from "./Components/Footer";
+import Projects from "./Components/Projects";
 
 function App() {
   const about = useRef();
@@ -17,6 +18,7 @@ function App() {
   const skills = useRef();
   const contact = useRef();
   const experiences = useRef();
+  const projects = useRef();
 
   const refs = { about, home, skills, contact, experiences };
 
@@ -45,6 +47,7 @@ function App() {
       <div ref={home} ><Home scrollToContact={scrollToContact}/></div>
       <div ref={about}><About theme={theme}/></div>
       <div ref={experiences}><Experience /></div>
+      <div ref={projects}><Projects /></div>
       <div ref={skills}><Skills /></div>
       <div ref={contact}><Contact /></div>
       <Footer />

@@ -12,7 +12,6 @@ import flutter from "/flutter.svg";
 import dart from "/dart.svg";
 import animation from "../assets/Animation.lottie";
 import python from "/python.svg";
-// import django from "/django.svg";
 import tailwind from "/tailwind.svg";
 import typescript from "/typescript.svg";
 
