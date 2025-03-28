@@ -12,7 +12,7 @@ const projects = [
         name: "Discover Books",
         type: "React-TS/Node.js", 
         github: "https://github.com/agigibairene/Discover_BookHub",
-        demo: "https://discovery-app-alpha.vercel.app/" 
+        demo: "https://discovery-app-five.vercel.app/" 
     },
     {
         image: netflix,
