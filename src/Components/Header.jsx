@@ -53,7 +53,6 @@ export default function Header({toggleTheme, theme, refs}){
     useEffect(() => {
         if (toggle){
             const dropDownHeight = navLinks.current.getBoundingClientRect().height;
-        console.log(dropDownHeight);
         refDropdownContainer.current.style.height = `${dropDownHeight}px`;
         }
         else{
@@ -90,7 +89,6 @@ export default function Header({toggleTheme, theme, refs}){
                                     className={({ isActive }) => (isActive ? "active" : "")} to={path}
                                 >
                                     {label}
-                                    {console.log(item.name)}
                                 </NavLink>
                             </motion.li>
                             })
