@@ -6,11 +6,11 @@ const education = [
         degree: "BSc Software Engineering",
         school: "African Leadership University, Rwanda",
         year: "Sept, 2022 - Present",
-        description: "I'm a final year student specializing in full stack development. Relevant Coursework: Python, JavaScript,Flutter etc",
+        description: "I'm a final year student specializing in full stack development. Relevant Coursework: Python, JavaScript, Flutter etc",
         icon: "🎓"
     },
     {
-        degree: "Cambridge A levels",
+        degree: "Cambridge A-levels",
         school: "African Science Academy, Accra",
         year: "2021 - June, 2022",
         description: "Studied A-level mathematics, A-level Physics, robotics and a badminton lover",
@@ -35,7 +35,7 @@ export default function Experience({ref}){
     return (
       <section id='experiences' className='education-section' ref={ref}>
         <div className='education-container'>
-          <h2 className='education-title'>School & Learning Chronicles</h2>
+          <h2 className='education-title'>Education & Experiences</h2>
           <div className='grid md:grid-cols-2'>
               {/* Education section */}
               <div>
