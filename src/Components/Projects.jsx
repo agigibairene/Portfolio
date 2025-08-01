@@ -1,5 +1,6 @@
 /* eslint-disable react/prop-types */
 import discoverBooks from "../assets/book-discover.png"
+import seedlinq from "../assets/seedlinq.png"
 import netflix from "../assets/netflix.png"
 import portfolio from "../assets/portfolio.png"
 import "../styles/project.css";
@@ -7,6 +8,13 @@ import { MdArrowOutward } from "react-icons/md";
 
 
 const projects = [
+    {
+        image: seedlinq,
+        name: 'SEEDLINQ',
+        type: 'React-TS/Django',
+        github: 'https://github.com/agigibairene/Capstone_project',
+        demo: 'https://agriconnect-frontend-rzd2q.ondigitalocean.app/'
+    },
     {
         image: discoverBooks, 
         name: "Discover Books",
