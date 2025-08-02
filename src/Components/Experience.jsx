@@ -11,7 +11,7 @@ const education = [
     },
     {
         degree: "Cambridge A-levels",
-        school: "African Science Academy, Accra",
+        school: "African Science Academy, Tema, Ghana",
         year: "2021 - June, 2022",
         description: "Studied A-level mathematics, A-level Physics, robotics and a badminton lover",
         icon: "🎓"
