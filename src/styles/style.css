@@ -126,11 +126,9 @@ nav .nav-links li{
     background: var(--special-color);
     padding: 0.4rem 1rem;
     color: #fff;
-    /* border-radius: 0.7rem; */
 }
 
 .resume.view{
-    /* border-radius: 1.5rem; */
     border-top-left-radius: 1.5rem;
     border-bottom-right-radius: 1.5rem;
     padding: 0.4rem 1.5rem;
