@@ -114,7 +114,7 @@ export default function Header({toggleTheme, theme, refs}){
                             </li>
                         ))
                     }
-                    <li>
+                    <li className="">
                         <a href={resume} className="resume view" to="/resume">Resume</a>
                     </li>
                 </ul>
