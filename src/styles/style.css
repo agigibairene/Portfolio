@@ -126,6 +126,7 @@ nav .nav-links li{
     background: var(--special-color);
     padding: 0.4rem 1rem;
     color: #fff;
+    border-radius: 0.7rem;
 }
 
 .resume.view{
