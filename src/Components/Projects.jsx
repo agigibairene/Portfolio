@@ -13,7 +13,7 @@ const projects = [
         name: 'SEEDLINQ',
         type: 'React-TS/Django',
         github: 'https://github.com/agigibairene/Capstone_project',
-        demo: 'https://agriconnect-frontend-rzd2q.ondigitalocean.app/'
+        demo: 'https://capstone-project-lyart-eta.vercel.app/'
     },
     {
         image: discoverBooks, 
