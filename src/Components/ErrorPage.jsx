@@ -7,6 +7,7 @@ import errorImg from "../assets/error-404.lottie";
 
 export default function ErrorPage(){
     const {status, statusText} = useRouteError();
+    console.log(status, statusText)
 
     return(
         <section id="error-page">

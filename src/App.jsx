@@ -20,7 +20,7 @@ function App() {
   const experiences = useRef();
   const projects = useRef();
 
-  const refs = { about, home, skills, contact, experiences };
+  const refs = { about, home, skills, contact, experiences, projects };
 
   const [theme, setTheme] = useTheme("theme", "dark");
 

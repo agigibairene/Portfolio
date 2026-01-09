@@ -31,3 +31,39 @@
 .project-name{
     font-weight: 600;
 }
+
+
+/* Tabs container */
+.project-tabs {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* Base tab */
+.project-tab {
+  padding: 0.5rem 1.25rem;
+  border-radius: 9999px;
+  font-size: 0.875rem;
+  font-weight: 500;
+  background: var(--tab-bg);
+  color: var(--text-color);
+  border: var(--card-border);
+  transition: all 0.25s ease;
+  cursor: pointer;
+}
+
+/* Hover */
+.project-tab:hover {
+  background: var(--special-color);
+  color: #fff;
+  transform: translateY(-1px);
+}
+
+/* Active tab */
+.project-tab.active {
+  background: var(--special-color);
+  color: #fff;
+  box-shadow: var(--box-shadow);
+}

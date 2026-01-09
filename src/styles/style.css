@@ -19,6 +19,9 @@
     --footer-border: 0.5px solid rgba(0,0,0,.3);
     --svg-color: #000;
     --card-border: 0.1px solid rgba(0,0,0,.3);
+
+    --tab-bg: rgb(3, 7, 18);
+
 }
 
 [data-theme = "dark"]{
@@ -37,6 +40,9 @@
     --footer-border: 0.5px solid rgb(209 213 219);
     --svg-color: #fff;
     --card-border: 0.1px solid rgb(209 213 219);
+
+    --tab-bg: rgb(3, 7, 18);
+
 }
 
 html{
