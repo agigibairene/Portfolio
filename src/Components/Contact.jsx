@@ -65,9 +65,8 @@ export default function Contact({ ref }) {
 
         if (isValid) {
             try {
-                // Sending email using EmailJS
                 await emailjs.send(
-                    "service_8xg79le", 
+                    "service_g8u0bg8", 
                     "template_v0kxqgs", 
                     userInput,
                     "ztn-p4ABCRrpeSO53" 
@@ -78,14 +77,12 @@ export default function Contact({ ref }) {
                     modalRef.current.openModal();
                 }
 
-                // Automatically close the modal after 3 seconds
                 setTimeout(() => {
                     if (modalRef.current) {
                         modalRef.current.closeModal();
                     }
                 }, 2000);
 
-                // Clear the form
                 setUserInput({ name: "", email: "", message: "" });
             } catch (error) {
                 console.error("Failed to send email:", error);

@@ -1,8 +1,8 @@
+
 /* eslint-disable react/display-name */
 /* eslint-disable react/prop-types */
 import { useImperativeHandle, useRef, forwardRef } from 'react';
 import { createPortal } from 'react-dom';
-import { Checkmark } from 'react-checkmark';
 
 const Modal = forwardRef(({ message }, ref) => {
   const dialogRef = useRef();
@@ -28,13 +28,24 @@ const Modal = forwardRef(({ message }, ref) => {
   };
 
   return createPortal(
-    <dialog className='dialogBox' ref={dialogRef}>
-      <h4>{message} <Checkmark color="#00abf0"/></h4>
-      <form method="dialog" onSubmit={handleClose}>
-        <button className="dialog-btn">Close</button>
-      </form>
+    <dialog ref={dialogRef} className="modal-dialog">
+      <div className="modal-content">
+        <div className="modal-header">
+          <div className="checkmark-wrapper">
+            <svg className="checkmark-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+              <polyline points="20 6 9 17 4 12"></polyline>
+            </svg>
+          </div>
+        </div>
+        <div className="modal-body">
+          <h2>{message}</h2>
+        </div>
+        <button onClick={handleClose} className="modal-button">
+          Close
+        </button>
+      </div>
     </dialog>,
-    document.getElementById("modal")
+    document.getElementById("modal") || document.body
   );
 });
 

@@ -57,12 +57,24 @@ html{
     margin: 0;
     padding: 0;
     line-height: 2;
+    scrollbar-width: none;
+  -ms-overflow-style: none;
 }
 
 body{
     background-color: var(--bg-color) !important;
     font-family: "Roboto", sans-serif;
+    scrollbar-width: none; 
+    -ms-overflow-style: none; 
+    overflow-y: scroll; 
 }
+
+body::-webkit-scrollbar {
+  width: 0;
+  background: transparent;
+}
+
+
 
 img{
     max-width: 100%;
