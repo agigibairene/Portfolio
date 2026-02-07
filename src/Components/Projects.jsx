@@ -58,7 +58,7 @@ const projects = {
     {
       name: "DjangoCampus UI",
       type:
-        "Improved responsiveness, fixed footer and registration form, added animations, icons, and country dropdown.",
+        "Improved responsiveness, fixed footer and registration form, added animations, icons, and country dropdown during Hactoberfest",
       demo: "https://djangocampus.tech/",
     },
   ],
