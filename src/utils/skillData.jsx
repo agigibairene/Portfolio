@@ -3,10 +3,10 @@ export const backend = [
         name: "Python",
         level: "Intermediate"
     },
-    // {
-    //     name: "Django",
-    //     level: "Beginner"
-    // },
+    {
+        name: "Django",
+        level: "Beginner"
+    },
     // {
     //     name: "SQL",
     //     level: "Beginner"
