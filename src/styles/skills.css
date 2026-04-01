@@ -176,3 +176,12 @@
         padding: 1.5rem;
     }
 }
+
+
+#contact-card{
+    background-color: var(--card-color);
+}
+
+#contact-title{
+    color: #00abf0;
+}

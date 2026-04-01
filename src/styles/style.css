@@ -1,6 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Kumbh+Sans:wght@100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Satisfy&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Playfair:ital,opsz,wght@0,5..1200,300..900;1,5..1200,300..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600&family=Playfair+Display:wght@400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600&family=Playfair+Display:wght@400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+
 
 :root{
     --bg-color: hsl(0, 0%, 98%);
@@ -58,12 +59,12 @@ html{
     padding: 0;
     line-height: 2;
     scrollbar-width: none;
-  -ms-overflow-style: none;
+    -ms-overflow-style: none;
 }
 
 body{
     background-color: var(--bg-color) !important;
-    font-family: "Roboto", sans-serif;
+      font-family: "Outfit", sans-serif !important;
     scrollbar-width: none; 
     -ms-overflow-style: none; 
     overflow-y: scroll; 
@@ -112,7 +113,6 @@ nav{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 2.5rem 8rem;
     width: 100%;
 }
 
@@ -290,7 +290,7 @@ h1{
 
 .home-text .description-home{
     margin-top: 1rem;
-    font-size: 0.8rem;
+    /* font-size: 0.8rem; */
 }
 
 .btns{

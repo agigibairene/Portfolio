@@ -6,11 +6,11 @@ import { FaArrowUp } from "react-icons/fa";
 import About from "./Components/About";
 import Home from "./Components/Home";
 import Skills from "./Components/Skills";
-import Contact from "./Components/Contact";
 import Experience from "./Components/Experience"; 
 import "./styles/style.css";
 import Footer from "./Components/Footer";
 import Projects from "./Components/Projects";
+import Contacts from "./Components/Contact";
 
 function App() {
   const about = useRef();
@@ -49,7 +49,7 @@ function App() {
       <div ref={experiences}><Experience /></div>
       <div ref={projects}><Projects /></div>
       <div ref={skills}><Skills /></div>
-      <div ref={contact}><Contact /></div>
+      <div ref={contact}><Contacts /></div>
       <Footer />
       <ScrollToTop
         smooth

@@ -66,7 +66,7 @@ export default function Header({toggleTheme, theme, refs}){
 
     return(
         <header>
-            <nav  className={isActive ? "opaque" : "" }>
+            <nav  className={isActive ? "opaque px-16 py-4" : " px-16 py-4" }>
                 <div className="logo">
                     <h2 className="text-2xl"><FaCode size={30} className="code"/> Irene</h2>
                     <div className="theme-icon">
@@ -96,7 +96,7 @@ export default function Header({toggleTheme, theme, refs}){
                 </ul>
                 <div className="nav-right" onClick={toggleSideMenu}>
                     {theme === "light" ? <FaMoon className="icon" onClick={toggleTheme}/> : <FaSun className="icon" onClick={toggleTheme}/> }
-                    <a className="resume view" href={resume} target="_blank" rel="noopener noreferrer">
+                    <a className="resume view outline-0" href={resume} target="_blank" rel="noopener noreferrer">
                         Resume
                     </a>
                     {toggle ? <FaTimes className="hamburger"  /> : <FaBars className="hamburger" />}

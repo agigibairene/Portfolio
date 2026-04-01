@@ -6,6 +6,8 @@ import netflix from "../assets/netflix.png";
 import portfolio from "../assets/portfolio.png";
 import "../styles/project.css";
 import { MdArrowOutward } from "react-icons/md";
+import { FaGithub } from "react-icons/fa6";
+
 
 const projects = {
   personal: [
@@ -13,6 +15,7 @@ const projects = {
       image: seedlinq,
       name: "SEEDLINQ",
       type: "React-TS / Django",
+      desc: "Connecting farmers with investors through a full-stack crowdfunding platform.",
       github: "https://github.com/agigibairene/Capstone_project",
       demo: "https://capstone-project-lyart-eta.vercel.app/",
     },
@@ -20,6 +23,7 @@ const projects = {
       image: discoverBooks,
       name: "Discover Books",
       type: "React-TS / Node.js",
+      desc: "A book discovery platform with search, filtering, and personalized browsing experience.",
       github: "https://github.com/agigibairene/Discover_BookHub",
       demo: "https://discovery-app-five.vercel.app/",
     },
@@ -27,6 +31,7 @@ const projects = {
       image: netflix,
       name: "NetflixGPT",
       type: "ReactJS / Firebase",
+      desc: "AI-powered movie recommendation app inspired by Netflix UI and Mistral-AI suggestions.",
       github: "https://github.com/agigibairene/Netflix-gpt",
       demo: "https://netflix-gpt-seven-smoky.vercel.app/",
     },
@@ -34,6 +39,7 @@ const projects = {
       image: portfolio,
       name: "Portfolio",
       type: "ReactJS",
+      desc: "A personal developer portfolio showcasing projects, skills, and technical journey.",
       github: "https://github.com/agigibairene/Portfolio",
       demo: "https://portfolio-hdhr.vercel.app/",
     },
@@ -52,13 +58,18 @@ const projects = {
         "A simple explanation of JavaScript hoisting, execution context, and memory allocation.",
       demo: "https://akawin.hashnode.dev/hoisting-titlein-js",
     },
+    {
+      name: 'How the Internet works',
+      type: 'An explanation of what happens when you search on the internet',
+      demo: 'https://medium.com/@ireneagigiba/how-the-internet-works-518686933e98'
+    }
   ],
 
   opensource: [
     {
       name: "DjangoCampus UI",
       type:
-        "Improved responsiveness, fixed footer and registration form, added animations, icons, and country dropdown during Hactoberfest",
+        "Improved responsiveness, fixed footer and registration form, added animations, icons, and country dropdown during Hacktoberfest.",
       demo: "https://djangocampus.tech/",
     },
   ],
@@ -66,7 +77,7 @@ const projects = {
 
 const tabs = [
   { key: "personal", label: "Personal Projects" },
-  { key: "opensource", label: "Open Source Contributions" },
+  { key: "opensource", label: "Open Source" },
   { key: "articles", label: "Articles" },
 ];
 
@@ -80,16 +91,16 @@ export default function Projects({ sectionRef }) {
       </h2>
 
       {/* Tabs */}
-      <div className="flex px-8 gap-4 mb-10 justify-center flex-wrap">
+      <div className="flex px-8 gap-4 mb-12 justify-center flex-wrap">
         {tabs.map((tab) => (
           <button
             key={tab.key}
             onClick={() => setActiveTab(tab.key)}
-            className={`px-4 py-2 rounded-full text-sm font-medium transition
+            className={`px-5 py-2 rounded-full text-sm font-medium transition-all duration-300 border
               ${
                 activeTab === tab.key
-                  ? "bg-[#030712] text-white"
-                  : "bg-gray-200 hover:bg-gray-300"
+                  ? "bg-[#030712] text-white border-[#030712] scale-105"
+                  : "bg-gray-200 hover:bg-gray-300 border-transparent"
               }`}
           >
             {tab.label}
@@ -98,43 +109,58 @@ export default function Projects({ sectionRef }) {
       </div>
 
       {/* Content */}
-      <div className="flex gap-6 justify-center flex-wrap px-8">
+      <div className="flex gap-8 justify-center flex-wrap px-8">
         {projects[activeTab].map((project, index) => {
           // PERSONAL PROJECT CARD
           if (activeTab === "personal") {
-            const { image, type, name, demo, github } = project;
+            const { image, type, name, demo, github, desc } = project;
 
             return (
               <div
                 key={demo}
-                className="w-[24rem] h-[19rem] p-4 rounded-md project pb-8"
+                className="w-[24rem] h-[22rem] p-4 rounded-md project pb-6 transition-transform duration-300 hover:-translate-y-2"
               >
                 <img
                   src={image}
                   alt={name}
-                  className="object-contain rounded-md"
+                  className="object-contain rounded-md mb-3"
                 />
 
-                <div className="flex justify-between px-6 mt-8">
-                  <div>
-                    <a href={github} target="_blank" rel="noopener noreferrer">
-                      <p className="project-name">{name}</p>
-                    </a>
-                    <p className="italic text-sm">{type}</p>
-                  </div>
-
-                  <a
-                    href={demo}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex items-start live"
-                  >
-                    <p>Live Demo</p>
-                    <MdArrowOutward
-                      size={25}
-                      className="ml-2 projects-arrow"
-                    />
+                <div className="px-4">
+                  <a href={github} target="_blank" rel="noopener noreferrer">
+                    <p className="project-name">{name}</p>
                   </a>
+
+                  <p className="italic text-sm mb-2">{type}</p>
+
+                  {/* NEW DESCRIPTION */}
+                  <p className="text-sm text-gray-600 leading-relaxed mb-4">
+                    {desc}
+                  </p>
+
+                  <div className="flex justify-between items-center">
+                    <a
+                      href={github}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-sm underline"
+                    >
+                      <FaGithub />
+                    </a>
+
+                    <a
+                      href={demo}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center live"
+                    >
+                      <p>Live Demo</p>
+                      <MdArrowOutward
+                        size={22}
+                        className="ml-1 projects-arrow"
+                      />
+                    </a>
+                  </div>
                 </div>
               </div>
             );
@@ -144,10 +170,13 @@ export default function Projects({ sectionRef }) {
           return (
             <div
               key={index}
-              className="w-[24rem] min-h-[12rem] p-6 rounded-md project"
+              className="w-[24rem] min-h-[14rem] p-6 rounded-md project transition-transform duration-300 hover:-translate-y-2"
             >
-              <h3 className="project-name mb-2">{project.name}</h3>
-              <p className="text-sm text-gray-600 mb-4">{project.type}</p>
+              <h3 className="project-name mb-3">{project.name}</h3>
+
+              <p className="text-sm text-gray-600 mb-6 leading-relaxed">
+                {project.type}
+              </p>
 
               <a
                 href={project.demo}
@@ -155,7 +184,9 @@ export default function Projects({ sectionRef }) {
                 rel="noopener noreferrer"
                 className="flex items-center live"
               >
-                <p>{activeTab === 'opensource' ? 'View' : 'Read'}</p>
+                <p>
+                  {activeTab === "opensource" ? "View Project" : "Read Article"}
+                </p>
                 <MdArrowOutward size={22} className="ml-2 projects-arrow" />
               </a>
             </div>

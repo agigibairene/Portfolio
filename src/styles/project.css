@@ -7,7 +7,6 @@
     border-radius: 0.75rem; 
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
     transition: transform 0.2s, box-shadow 0.2s; 
-    border: var(--card-border);
 }
 
 .project:hover {
@@ -49,7 +48,7 @@
   font-weight: 500;
   background: var(--tab-bg);
   color: var(--text-color);
-  border: var(--card-border);
+  /* border: var(--card-border); */
   transition: all 0.25s ease;
   cursor: pointer;
 }
