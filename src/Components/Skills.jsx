@@ -2,9 +2,14 @@ import "../styles/skills.css";
 import { frontend, backend } from "../utils/skillData";
 import SkillsCard from "../utils/SkillsCard";
 export default function Skills(){
+    
     return(
         <section className="skills section" id="skills">
-            <h2 className="section__title">~ My Skills ~</h2>
+            <h2 className="section__title" style={{
+            fontSize: "clamp(1.4rem, 3vw, 1.9rem)",
+            fontFamily: "'Playfair Display', serif",
+            color: "var(--special-color)",
+          }}>~ My Skills ~</h2>
             <div className="skills__container container grid">
                 <SkillsCard title="Frontend" skills={frontend}/>
                 <SkillsCard title="Backend" skills={backend}/>

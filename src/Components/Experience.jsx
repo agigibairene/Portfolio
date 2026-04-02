@@ -46,7 +46,7 @@ function TimelineCard({ icon, title, subtitle, year, description }) {
     <div
       onMouseEnter={() => setHovered(true)}
       onMouseLeave={() => setHovered(false)}
-      className="flex gap-4 p-5 rounded-xl transition-all duration-300"
+      className="flex gap-4 p-5 cursor-pointer rounded-xl transition-all duration-300"
       style={{
         background: "var(--card-color)",
         boxShadow: hovered ? "0px 6px 24px -4px #00abf0" : "var(--box-shadow)",

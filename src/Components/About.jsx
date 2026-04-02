@@ -21,7 +21,11 @@ const logos = [jsLogo, reactLogo, typescript,  tailwind, python, flutter, dart];
 export default function About({ref, theme}){
     return(
         <section id="about" ref={ref}>
-            <h2>~ About me ~</h2>
+            <h2 style={{
+            fontSize: "clamp(1.4rem, 3vw, 1.9rem)",
+            fontFamily: "'Playfair Display', serif",
+            color: "var(--special-color)",
+          }}>~ About me ~</h2>
             <div className="about-me">
                 <div className="mini-image">
                     <DotLottieReact
@@ -57,7 +61,11 @@ export default function About({ref, theme}){
             </div>
 
             <div className="tech-stack">
-                <h2>My Tech Stack</h2>
+                <h2 className='' style={{
+            fontSize: "clamp(1.4rem, 3vw, 1.9rem)",
+            fontFamily: "'Playfair Display', serif",
+            color: "var(--special-color)",
+          }}>My Tech Stack</h2>
                 <div className="row-logo">
                    {
                     logos.map((logo, index) => 

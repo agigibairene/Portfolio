@@ -8,7 +8,6 @@ import "../styles/project.css";
 import { MdArrowOutward } from "react-icons/md";
 import { FaGithub } from "react-icons/fa6";
 
-
 const projects = {
   personal: [
     {
@@ -59,10 +58,10 @@ const projects = {
       demo: "https://akawin.hashnode.dev/hoisting-titlein-js",
     },
     {
-      name: 'How the Internet works',
-      type: 'An explanation of what happens when you search on the internet',
-      demo: 'https://medium.com/@ireneagigiba/how-the-internet-works-518686933e98'
-    }
+      name: "How the Internet works",
+      type: "An explanation of what happens when you search on the internet",
+      demo: "https://medium.com/@ireneagigiba/how-the-internet-works-518686933e98",
+    },
   ],
 
   opensource: [
@@ -81,12 +80,40 @@ const tabs = [
   { key: "articles", label: "Articles" },
 ];
 
+function ProjectCard({ children }) {
+  const [hovered, setHovered] = useState(false);
+
+  return (
+    <div
+      onMouseEnter={() => setHovered(true)}
+      onMouseLeave={() => setHovered(false)}
+      className="transition-all duration-300 rounded-md"
+      style={{
+        background: "var(--card-color)",
+        boxShadow: hovered
+          ? "0px 6px 24px -4px #00abf0"
+          : "var(--box-shadow)",
+        transform: hovered ? "translateY(-6px)" : "translateY(0)",
+      }}
+    >
+      {children}
+    </div>
+  );
+}
+
 export default function Projects({ sectionRef }) {
   const [activeTab, setActiveTab] = useState("personal");
 
   return (
-    <section id="projects" ref={sectionRef}>
-      <h2 className="text-center text-2xl md:text-3xl mb-10">
+    <section id="projects" className="mt-6" ref={sectionRef}>
+      <h2
+        className="text-center text-2xl md:text-3xl mb-10"
+        style={{
+          fontSize: "clamp(1.4rem, 3vw, 1.9rem)",
+          fontFamily: "'Playfair Display', serif",
+          color: "var(--special-color)",
+        }}
+      >
         ~ Projects ~
       </h2>
 
@@ -109,87 +136,76 @@ export default function Projects({ sectionRef }) {
       </div>
 
       {/* Content */}
-      <div className="flex gap-8 justify-center flex-wrap px-8">
+      <div className="flex gap-8 justify-center flex-wrap cursor-pointer px-8">
         {projects[activeTab].map((project, index) => {
-          // PERSONAL PROJECT CARD
           if (activeTab === "personal") {
             const { image, type, name, demo, github, desc } = project;
 
             return (
-              <div
-                key={demo}
-                className="w-[24rem] h-[22rem] p-4 rounded-md project pb-6 transition-transform duration-300 hover:-translate-y-2"
-              >
-                <img
-                  src={image}
-                  alt={name}
-                  className="object-contain rounded-md mb-3"
-                />
+              <ProjectCard key={demo}>
+                <div className="w-[24rem] h-[22rem] p-4 pb-6">
+                  <img
+                    src={image}
+                    alt={name}
+                    className="object-contain rounded-md mb-3"
+                  />
 
-                <div className="px-4">
-                  <a href={github} target="_blank" rel="noopener noreferrer">
-                    <p className="project-name">{name}</p>
-                  </a>
-
-                  <p className="italic text-sm mb-2">{type}</p>
-
-                  {/* NEW DESCRIPTION */}
-                  <p className="text-sm text-gray-600 leading-relaxed mb-4">
-                    {desc}
-                  </p>
-
-                  <div className="flex justify-between items-center">
-                    <a
-                      href={github}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="text-sm underline"
-                    >
-                      <FaGithub />
+                  <div className="px-4">
+                    <a href={github} target="_blank" rel="noopener noreferrer">
+                      <p className="project-name">{name}</p>
                     </a>
 
-                    <a
-                      href={demo}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="flex items-center live"
-                    >
-                      <p>Live Demo</p>
-                      <MdArrowOutward
-                        size={22}
-                        className="ml-1 projects-arrow"
-                      />
-                    </a>
+                    <p className="italic text-sm mb-2">{type}</p>
+
+                    <p className="text-sm text-gray-600 leading-relaxed mb-4">
+                      {desc}
+                    </p>
+
+                    <div className="flex justify-between items-center">
+                      <a href={github} target="_blank" rel="noopener noreferrer">
+                        <FaGithub />
+                      </a>
+
+                      <a
+                        href={demo}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex items-center live"
+                      >
+                        <p>Live Demo</p>
+                        <MdArrowOutward size={22} className="ml-1" />
+                      </a>
+                    </div>
                   </div>
                 </div>
-              </div>
+              </ProjectCard>
             );
           }
 
-          // ARTICLES & OPEN SOURCE CARD
           return (
-            <div
-              key={index}
-              className="w-[24rem] min-h-[14rem] p-6 rounded-md project transition-transform duration-300 hover:-translate-y-2"
-            >
-              <h3 className="project-name mb-3">{project.name}</h3>
+            <ProjectCard key={index}>
+              <div className="w-[24rem] min-h-[14rem] p-6 cursor-pointer">
+                <h3 className="project-name mb-3">{project.name}</h3>
 
-              <p className="text-sm text-gray-600 mb-6 leading-relaxed">
-                {project.type}
-              </p>
-
-              <a
-                href={project.demo}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center live"
-              >
-                <p>
-                  {activeTab === "opensource" ? "View Project" : "Read Article"}
+                <p className="text-sm text-gray-600 mb-6 leading-relaxed">
+                  {project.type}
                 </p>
-                <MdArrowOutward size={22} className="ml-2 projects-arrow" />
-              </a>
-            </div>
+
+                <a
+                  href={project.demo}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center live"
+                >
+                  <p>
+                    {activeTab === "opensource"
+                      ? "View Project"
+                      : "Read Article"}
+                  </p>
+                  <MdArrowOutward size={22} className="ml-2" />
+                </a>
+              </div>
+            </ProjectCard>
           );
         })}
       </div>
