@@ -185,7 +185,7 @@ export default function Projects({ sectionRef }) {
           return (
             <ProjectCard key={index}>
               <div className="w-[24rem] min-h-[14rem] p-6 cursor-pointer">
-                <h3 className="project-name mb-3">{project.name}</h3>
+                <h3 className="project-name text-white mb-3">{project.name}</h3>
 
                 <p className="text-sm text-gray-600 mb-6 leading-relaxed">
                   {project.type}
