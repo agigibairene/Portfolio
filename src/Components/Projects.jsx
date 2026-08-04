@@ -16,7 +16,7 @@ const projects = {
       type: "React-TS / Django",
       desc: "Connecting farmers with investors through a full-stack crowdfunding platform.",
       github: "https://github.com/agigibairene/Capstone_project",
-      demo: "https://capstone-project-lyart-eta.vercel.app/",
+      demo: "https://seedlinq.vercel.app/",
     },
     {
       image: discoverBooks,
