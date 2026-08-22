@@ -1,9 +1,11 @@
-@import url('https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600&family=Playfair+Display:wght@400;500&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600&family=Playfair+Display:wght@400;500&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600&family=DM+Mono:wght@400;500&family=Outfit:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600&display=swap');
 
+@theme {
+  --font-mono: 'JetBrains Mono', 'Fira Code', 'DM Mono', monospace;
+}
 
 :root{
+    --font-mono: 'JetBrains Mono', 'Fira Code', 'DM Mono', monospace;
     --bg-color: hsl(0, 0%, 98%);
     --text-color: #000;
     --icon-color: #000;
@@ -60,7 +62,7 @@ html{
 
 body{
     background-color: var(--bg-color) !important;
-      font-family: "Outfit", sans-serif !important;
+    font-family: "Outfit", sans-serif !important;
     scrollbar-width: none; 
     -ms-overflow-style: none; 
     overflow-y: scroll; 

@@ -12,7 +12,7 @@ import Footer from "./Components/Footer";
 import Projects from "./Components/Projects";
 import Contacts from "./Components/Contact";
 import NavBar from './Components/NavBar'
-import Terminal from './Components/x'
+import Terminal from './Components/Terminal'
 
 function App() {
   const about = useRef();
@@ -48,7 +48,7 @@ function App() {
       {/* <Header refs={refs} toggleTheme={toggleTheme} theme={theme} /> */}
       <NavBar />
       {/* <div ref={home} ><Home scrollToContact={scrollToContact}/></div> */}
-      {/* <Terminal /> */}
+      <Terminal />
       <div ref={about}><About theme={theme}/></div>
       <div ref={experiences}><Experience /></div>
       <div ref={projects}><Projects /></div>
