@@ -1,9 +1,10 @@
-const Footer = () => {
+export default function Footer(){
   return (
-    <footer className='footer'>
-      <p>&copy; {new Date().getFullYear()} Irene Agigiba. All rights reserved.</p>
+    <footer className='py-2 mx-auto text-center'>
+      <div className="h-px w-full bg-gray-700 "></div>
+      <p className="mt-1.5 text-gray-200">&copy; {new Date().getFullYear()} Irene Akawin. All rights reserved.</p>
     </footer>
   );
 }
 
-export default Footer;
+

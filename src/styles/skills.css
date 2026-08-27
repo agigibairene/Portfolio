@@ -155,10 +155,10 @@
     margin-right: auto
 }
 
-.grid {
+/* .grid {
     display: grid;
     gap: 4rem
-}
+} */
 
 @media (max-width: 992px) {
     .skills__container {

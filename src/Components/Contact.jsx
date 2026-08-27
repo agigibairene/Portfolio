@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Mail, ArrowRight } from "lucide-react";
 import { FaMediumM, FaGithub, FaLinkedinIn } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 const contacts = [
   {
@@ -33,13 +34,13 @@ function ContactCard({ label, value, href, icon: Icon }) {
   const [hovered, setHovered] = useState(false);
 
   return (
-    <a
-      href={href}
+    <Link
+      to={href}
       target="_blank"
       rel="noopener noreferrer"
       onMouseEnter={() => setHovered(true)}
       onMouseLeave={() => setHovered(false)}
-      className="group flex items-center gap-4 p-5 rounded-2xl cursor-pointer transition-all duration-300 h-full"
+      className="group flex items-center gap-4 px-10 rounded-2xl cursor-pointer transition-all duration-300 h-full"
       style={{
         background: "rgba(255,255,255,0.05)",
         backdropFilter: "blur(12px)",
@@ -60,7 +61,7 @@ function ContactCard({ label, value, href, icon: Icon }) {
       </div>
 
       {/* Text */}
-      <div className="flex flex-col min-w-0 flex-grow">
+      <div className="flex flex-col min-w-0 grow">
         <span
           className="text-[10px] tracking-widest"
           style={{ color: "var(--text-color)", opacity: 0.6 }}
@@ -86,7 +87,7 @@ function ContactCard({ label, value, href, icon: Icon }) {
       >
         <ArrowRight size={16} />
       </div>
-    </a>
+    </Link>
   );
 }
 

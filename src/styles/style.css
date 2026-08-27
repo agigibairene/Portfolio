@@ -84,13 +84,13 @@ a{
     text-decoration: none;
     font-size: 1rem;
     color: var(--text-color);
-    padding: 0;
-    margin: 0;
+    padding: 1rem;
+    /* margin: 0; */
 }
 
-h1, h2, a, p{
+/* h1, h2, a, p{
     color: var(--text-color);
-}
+} */
 
 header{
     /* padding: 0rem 8rem; */

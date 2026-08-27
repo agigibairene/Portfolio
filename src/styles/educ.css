@@ -18,16 +18,16 @@
     margin-bottom: 3rem; 
 }
 
-.grid {
+/* .grid {
     display: grid;
     gap: 3rem; 
-}
+} */
 
 /* Responsive grid layout */
 @media (min-width: 768px) {
-    .grid {
+    /* .grid {
         grid-template-columns: repeat(2, 1fr); 
-    }
+    } */
 }
 
 .section-title {
