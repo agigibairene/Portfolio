@@ -88,9 +88,7 @@ a{
     /* margin: 0; */
 }
 
-/* h1, h2, a, p{
-    color: var(--text-color);
-} */
+
 
 header{
     /* padding: 0rem 8rem; */
@@ -166,15 +164,7 @@ button{
     gap: 0.8rem;
 }
 
-.logo h2{
-    display: flex;
-    align-items: center;
-    margin: 0;
-}
 
-.logo h2 .code{
-    color: var(--special-color);
-}
 
 nav .nav-right .icon{
     margin-right: 2rem;
@@ -592,80 +582,10 @@ h1{
 }
 
 
-/***************************** ABOUT PAGE STYLE ******************/
-#about{
-    padding: 1% 10%;
-}
 
-.row-logo{
-    display: flex;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 1.5rem;
-    justify-content: center;
-    margin-block: 2rem;
-    margin-top: 2rem;
-}
 
-h2{
-    text-align: center;
-    font-weight: 700 !important;
-}
 
-.row-logo .tech-card{
-    background-color: var(--card-color);
-    border-radius: 0.7rem;
-    width: 90px;
-    height: 90px;
-    display: flex;
-    box-shadow: var(--box-shadow);
-    animation: animate 1.5s infinite;
-}
 
-.row-logo .tech-card img{
-    margin: auto;
-    object-fit: contain;
-    transition: filter 0.3s ease;
-}
-
-.row-logo .tech-card img.toggled {
-    filter: brightness(0) invert(1); 
-}
-
-@keyframes animate {
-    0%{
-        transform: translateY(0px);
-    }
-    50%{
-        transform: translateY(-10px);
-    }
-    100%{
-        transform: translateX(0px);
-    }
-}
-
-.about-me{
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 2.5rem;
-    align-items: center;
-    margin-block: 2rem;
-}
-
-.about-txt {
-    padding-right: 2rem;
-    text-align: left;
-    color: var(--text-color);
-}
-
-.about-txt div{
-    margin-bottom: 1rem;
-}
-
-.lottie{
-    height: 500px;
-    width: 350px;
-}
 
 .resume.download{
     display: flex;
@@ -679,21 +599,7 @@ h2{
 }
 
 
-@media (max-width: 845px) {
-    .about-me{
-        display: flex;
-        flex-direction: column;
-    }
 
-    .resume.download.resume-doc{
-       margin-inline: auto;
-       padding-inline: 1.5rem;
-    } 
-
-    .about-txt{
-        align-items: center;
-    }
-}
 
 /****************************ERROR PAGE *****************/
 #error-page{
@@ -707,7 +613,7 @@ h2{
 }
 
 #error-page h2{
-    font-size: 3rem;
+    /* font-size: 3rem; */
     font-weight: 300;
     font-style: italic;
     color: var(--text-color);

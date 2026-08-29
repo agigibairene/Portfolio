@@ -16,9 +16,6 @@
     transform: translateY(-0.5rem);
 }
 
-#projects h2, .project .live .projects-arrow, .live{
-    color: var(--special-color);
-}
 
 .project .live p{
     color: var(--special-color) !important;

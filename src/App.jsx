@@ -3,7 +3,6 @@ import Header from "./Components/Header";
 import { useTheme } from "./hooks/useTheme";
 import ScrollToTop from "react-scroll-to-top";
 import { FaArrowUp } from "react-icons/fa";
-// import About from "./Components/About";
 import Home from "./Components/Home";
 import Skills from "./Components/Skills";
 import Experience from "./Components/Experience"; 
@@ -13,7 +12,7 @@ import Projects from "./Components/Projects";
 import Contacts from "./Components/Contact";
 import NavBar from './Components/NavBar'
 import Terminal from './Components/Terminal';
-import About from './utils/About'
+import About from './Components/About'
 
 function App() {
   const about = useRef();
