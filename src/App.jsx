@@ -8,7 +8,7 @@ import Skills from "./Components/Skills";
 import Experience from "./Components/Experience"; 
 import "./styles/style.css";
 import Footer from "./Components/Footer";
-import Projects from "./Components/Projects";
+import Projects from "./Components/Projects.tsx";
 import Contacts from "./Components/Contact";
 import NavBar from './Components/NavBar'
 import Terminal from './Components/Terminal';

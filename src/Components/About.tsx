@@ -4,8 +4,9 @@ import profile from '../assets/Irene.jpg'
 export default function About(){
     return(
         <section className="max-w-4xl mx-auto mt-20">
-            <span className="text-[#00abf0]">// about me</span>
-            <div className="grid grid-cols-[1fr] md:grid-cols-[1.4fr_1fr] gap-12 items-start mt-5">
+            <p className="text-white mb-4">
+                // <span className="text-(--special-color)">about</span>
+            </p>            <div className="grid grid-cols-[1fr] md:grid-cols-[1.4fr_1fr] gap-12 items-start mt-5">
                 <div className='text-gray-200'>
                     <p className='mb-4'>I'm a software engineer with two years of experience, most of it spent on backend systems that need to hold up under real traffic, not just work on my laptop. I like taking systems apart to see how they actually behave — a slow query, a flaky deploy, a build process nobody wanted to touch.</p>
                     <p className='mb-4'>I care most about code that's easy for the next person to read, including future me. Outside of my day job, I contribute to a couple of small open-source tools and I'm slowly working through building a distributed key-value store from scratch, mostly to understand consensus algorithms properly.</p>

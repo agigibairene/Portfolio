@@ -8,7 +8,7 @@ import About from './Components/About.tsx';
 import ErrorPage from './Components/ErrorPage.jsx';
 import Contact from './Components/Contact.jsx';
 import Experience from './Components/Experience.jsx';
-import Projects from './Components/Projects.jsx';
+import Projects from './Components/Projects.tsx';
 
 const appRouter = createBrowserRouter([
   { path: '/',
