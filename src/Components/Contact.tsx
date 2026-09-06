@@ -1,9 +1,17 @@
 import { useState } from "react";
-import { Mail, ArrowRight } from "lucide-react";
+import { Mail, ArrowRight, type LucideIcon } from "lucide-react";
 import { FaMediumM, FaGithub, FaLinkedinIn } from "react-icons/fa";
+import type { IconType } from "react-icons";
 import { Link } from "react-router-dom";
 
-const contacts = [
+interface Contact {
+  label: string;
+  value: string;
+  href: string;
+  icon: LucideIcon | IconType;
+}
+
+const contacts: Contact[] = [
   {
     label: "EMAIL",
     value: "agigibaakawin@gmail.com",
@@ -30,7 +38,9 @@ const contacts = [
   },
 ];
 
-function ContactCard({ label, value, href, icon: Icon }) {
+interface ContactCardProps extends Contact {}
+
+function ContactCard({ label, value, href, icon: Icon }: ContactCardProps) {
   const [hovered, setHovered] = useState(false);
 
   return (
@@ -40,7 +50,7 @@ function ContactCard({ label, value, href, icon: Icon }) {
       rel="noopener noreferrer"
       onMouseEnter={() => setHovered(true)}
       onMouseLeave={() => setHovered(false)}
-      className="group flex items-center gap-4 px-10 rounded-2xl cursor-pointer transition-all duration-300 h-full"
+      className="group flex items-center gap-4 px-5 py-2.5 rounded-2xl cursor-pointer transition-all duration-300 h-full"
       style={{
         background: "rgba(255,255,255,0.05)",
         backdropFilter: "blur(12px)",
@@ -101,7 +111,7 @@ export default function Contacts() {
         className="w-full max-w-3xl md:max-w-4xl lg:max-w-5xl rounded-3xl p-6 sm:p-8"
         style={{
           background: "var(--card-color)",
-        backdropFilter: "blur(12px)",
+          backdropFilter: "blur(12px)",
           border: "none",
           boxShadow: "var(--box-shadow)",
         }}
@@ -129,7 +139,7 @@ export default function Contacts() {
         />
 
         {/* Cards */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 auto-rows-fr" style={{gap: '2rem'}}>
+        <div className="grid grid-cols-1 sm:grid-cols-2 auto-rows-fr" style={{ gap: "2rem" }}>
           {contacts.map((c) => (
             <ContactCard key={c.label} {...c} />
           ))}

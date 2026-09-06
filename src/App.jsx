@@ -3,7 +3,6 @@ import Header from "./Components/Header";
 import { useTheme } from "./hooks/useTheme";
 import ScrollToTop from "react-scroll-to-top";
 import { FaArrowUp } from "react-icons/fa";
-import Home from "./Components/Home";
 import Skills from "./Components/Skills";
 import Experience from "./Components/Experience"; 
 import "./styles/style.css";

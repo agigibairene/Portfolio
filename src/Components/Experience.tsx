@@ -174,54 +174,54 @@ export default function Experience({ ref }: ExperienceProps) {
 
   return (
     <section
-      id="experiences"
       ref={ref}
-      className="max-w-4xl mx-auto mt-36"
       style={{ background: "var(--bg-color)" }}
     >
       {/* Heading */}
-      <p className="text-white mb-4">
-        //{" "}
-        <span className="text-(--special-color)">
-          experience && education
-        </span>
-      </p>
-
-      {/* Grid */}
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-x-6 md:gap-x-10 gap-y-4 max-w-5xl mx-auto">
-        {/* Labels */}
-        <ColumnLabel>Education</ColumnLabel>
-        <ColumnLabel>Experience</ColumnLabel>
-
-        {/* Paired rows */}
-        {rows.map((row, i) => (
-          <Fragment key={i}>
-            {row.edu ? (
-              <TimelineCard
-                icon={row.edu.icon}
-                title={row.edu.degree ?? ""}
-                subtitle={row.edu.school ?? ""}
-                year={row.edu.year}
-                description={row.edu.description}
-              />
-            ) : (
-              <div />
-            )}
-
-            {row.exp ? (
-              <TimelineCard
-                icon={row.exp.icon}
-                title={row.exp.role ?? ""}
-                subtitle={row.exp.company ?? ""}
-                year={row.exp.year}
-                description={row.exp.description}
-              />
-            ) : (
-              <div />
-            )}
-          </Fragment>
-        ))}
+      <div className="mb-20 max-w-4xl mx-auto mt-20">
+        <p className="text-white mb-4">
+          //{" "}
+          <span className="text-(--special-color)">
+            experience && education
+          </span>
+        </p>
+        {/* Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-x-6 md:gap-x-10 gap-y-4 max-w-5xl mx-auto">
+          {/* Labels */}
+          <ColumnLabel>Education</ColumnLabel>
+          <ColumnLabel>Experience</ColumnLabel>
+          {/* Paired rows */}
+          {rows.map((row, i) => (
+            <Fragment key={i}>
+              {row.edu ? (
+                <TimelineCard
+                  icon={row.edu.icon}
+                  title={row.edu.degree ?? ""}
+                  subtitle={row.edu.school ?? ""}
+                  year={row.edu.year}
+                  description={row.edu.description}
+                />
+              ) : (
+                <div />
+              )}
+              {row.exp ? (
+                <TimelineCard
+                  icon={row.exp.icon}
+                  title={row.exp.role ?? ""}
+                  subtitle={row.exp.company ?? ""}
+                  year={row.exp.year}
+                  description={row.exp.description}
+                />
+              ) : (
+                <div />
+              )}
+            </Fragment>
+          ))}
+        </div>
       </div>
+
+      <div className="h-px w-full bg-gray-700 "></div>
+
     </section>
   );
 }

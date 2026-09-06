@@ -186,8 +186,8 @@ export default function TerminalHero() {
   };
 
   return (
-    <section className="pt-16 pb-10 px-4 sm:px-6">
-      <div className="max-w-4xl mx-auto">
+    <section className="pt-16 pb-10 ">
+      <div className="max-w-4xl mx-auto px-4 sm:px-6 mb-20">
         <div className="bg-(--card-color) border border-[#00abf0]/25 rounded-2xl overflow-hidden shadow-[0_20px_50px_rgba(0,0,0,0.4)] shadow-[#00abf0]/10 backdrop-blur-md transition-all duration-300 hover:border-[#00abf0]/40 hover:shadow-[0_20px_50px_rgba(0,171,240,0.18)]">
           {/* title bar */}
           <div className="flex items-center gap-2 px-4 py-3 bg-black/30 border-b border-[#00abf0]/15">
@@ -295,6 +295,8 @@ export default function TerminalHero() {
           </div>
         </div>
       </div>
+
+      <div className="h-px w-full bg-gray-700 "></div>
     </section>
   );
 }
