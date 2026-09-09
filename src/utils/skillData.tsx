@@ -68,36 +68,95 @@ export const projects : Project[] = [
  
 ];
 
-export interface Articles{
-    name: string
-    type: string
-    demo: string
+export interface Articles {
+  name: string;
+  type: string;
+  demo: string;
+  tag: string;
+  date: string;
+  featured?: boolean;
 }
 
 export const articles: Articles[] = [
-    {
-      name: "{{ Django Architecture }}",
-      type:
-        "Explains how Django’s MVT architecture and URL dispatcher work together to create structured and scalable applications.",
-      demo: "https://medium.com/@ireneagigiba/django-architecture-495b643c2e3e",
-    },
-    {
-      name: "<Hoisting in JavaScript />",
-      type:
-        "A simple explanation of JavaScript hoisting, execution context, and memory allocation.",
-      demo: "https://akawin.hashnode.dev/hoisting-titlein-js",
-    },
-    {
-      name: "How the Internet works",
-      type: "An explanation of what happens when you search on the internet",
-      demo: "https://medium.com/@ireneagigiba/how-the-internet-works-518686933e98",
-    },
-]
+  {
+    name: "DNS: How Your Browser Finds a Website",
+    type:
+      "A breakdown of the DNS lookup chain, from your browser's cache to root and authoritative servers.",
+    demo: "https://medium.com/@ireneagigiba/dns-how-your-browser-finds-a-website-6b20b48049ec",
+    tag: "networking",
+    date: "Aug 2026",
+  },
+  {
+    name: "Django Architecture",
+    type:
+      "Explains how Django's MVT architecture and URL dispatcher work together to create structured and scalable applications.",
+    demo: "https://medium.com/@ireneagigiba/django-architecture-495b643c2e3e",
+    tag: "backend",
+    date: "Jun 2026",
+    featured: true,
+  },
+  {
+    name: "Hoisting in JavaScript",
+    type:
+      "A simple explanation of JavaScript hoisting, execution context, and memory allocation.",
+    demo: "https://akawin.hashnode.dev/hoisting-titlein-js",
+    tag: "javascript",
+    date: "May 2026",
+  },
+  {
+    name: "How the Internet Works",
+    type: "An explanation of what happens when you search on the internet.",
+    demo: "https://medium.com/@ireneagigiba/how-the-internet-works-518686933e98",
+    tag: "networking",
+    date: "Mar 2026",
+  },
+];
 
-export const opensource: Articles[] = [
-    {
-      name: "DjangoCampus UI",
-      type: "Improved responsiveness, fixed footer and registration form, added animations, icons, and country dropdown during Hacktoberfest.",
-      demo: "https://djangocampus.tech/",
-    },
-]
+
+export interface Contribution {
+  name: string;
+  repo: string;
+  badge: string;
+  description: string;
+  link: string;
+  linkText: string;
+}
+
+export const contributions: Contribution[] = [
+  {
+    name: "djangocms-stories",
+    repo: "django-cms",
+    badge: "merged",
+    description:
+      "Traced a signal bug causing publish dates to never be set, and wired the fix into djangocms-versioning.",
+    link: "https://github.com/django-cms/djangocms-stories/pull/89",
+    linkText: "View pull request",
+  },
+  {
+    name: "Djangonaut Space",
+    repo: "2026",
+    badge: "mentee",
+    description:
+      "Completed an 8-week Django mentorship with weekly code reviews and maintainer pairing.",
+    link: "https://djangonaut.space/",
+    linkText: "View program",
+  },
+  {
+    name: "workshop-registration",
+    repo: "djangocampus",
+    badge: "PR merged",
+    description:
+      "Built a searchable country dropdown for 70+ countries and fixed dialog responsiveness on small screens.",
+    link: "https://github.com/djangocampus/workshop-registration/pull/10",
+    linkText: "View pull request",
+  },
+  {
+    name: "djangocampus-ui",
+    repo: "djangocampus",
+    badge: "PR merged",
+    description:
+      "Swapped social icons for accessible Lucide icons with ARIA labels and array-mapped quick links.",
+    link: "https://github.com/djangocampus/djangocampus-ui/pull/13",
+    linkText: "View pull request",
+  },
+];

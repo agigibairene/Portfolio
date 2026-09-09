@@ -22,9 +22,6 @@ interface ColumnLabelProps {
   children: ReactNode;
 }
 
-interface ExperienceProps {
-  ref?: React.Ref<HTMLElement>;
-}
 
 const education: TimelineItem[] = [
   {
@@ -64,13 +61,7 @@ const experience: TimelineItem[] = [
   },
 ];
 
-function TimelineCard({
-  icon,
-  title,
-  subtitle,
-  year,
-  description,
-}: TimelineCardProps) {
+function TimelineCard({ icon, title, subtitle, year, description, }: TimelineCardProps) {
   const [hovered, setHovered] = useState<boolean>(false);
 
   return (
@@ -164,7 +155,7 @@ function ColumnLabel({ children }: ColumnLabelProps) {
   );
 }
 
-export default function Experience({ ref }: ExperienceProps) {
+export default function Experience() {
   const rowCount = Math.max(education.length, experience.length);
 
   const rows = Array.from({ length: rowCount }, (_, i) => ({
@@ -173,12 +164,9 @@ export default function Experience({ ref }: ExperienceProps) {
   }));
 
   return (
-    <section
-      ref={ref}
-      style={{ background: "var(--bg-color)" }}
-    >
+    <section style={{ background: "var(--bg-color)" }}>
       {/* Heading */}
-      <div className="mb-20 max-w-4xl mx-auto mt-20">
+      <div className="mb-20 px-20 md:px-0 max-w-4xl mx-auto mt-20">
         <p className="text-white mb-4">
           //{" "}
           <span className="text-(--special-color)">

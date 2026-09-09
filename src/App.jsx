@@ -1,6 +1,3 @@
-import { useEffect, useRef } from "react";
-import Header from "./Components/Header";
-import { useTheme } from "./hooks/useTheme";
 import ScrollToTop from "react-scroll-to-top";
 import { FaArrowUp } from "react-icons/fa";
 import Skills from "./Components/Skills";
@@ -11,27 +8,11 @@ import Projects from "./Components/Projects.tsx";
 import Contacts from "./Components/Contact";
 import NavBar from './Components/NavBar'
 import Terminal from './Components/Terminal';
-import About from './Components/About'
+import About from './Components/About';
+import OpenSourceContributions from './Components/OpenSource.tsx';
+import BlogList from './Components/Blog.tsx'
 
 function App() {
-  const about = useRef();
-  const home = useRef();
-  const skills = useRef();
-  const contact = useRef();
-  const experiences = useRef();
-  const projects = useRef();
-
-  const refs = { about, home, skills, contact, experiences, projects };
-
-  const [theme, setTheme] = useTheme("theme", "dark");
-
-  useEffect(() => {
-    document.body.setAttribute("data-theme", theme);
-  }, [theme]);
-
-  function toggleTheme() {
-    setTheme(theme === "light" ? "dark" : "light");
-  }
 
   const scrollToContact = () => {
     if (contact.current) {
@@ -44,16 +25,15 @@ function App() {
 
   return (
     <section id="home">
-      {/* <Header refs={refs} toggleTheme={toggleTheme} theme={theme} /> */}
       <NavBar />
-      {/* <div ref={home} ><Home scrollToContact={scrollToContact}/></div> */}
       <Terminal />
       <About />
-      {/* <div ref={about}><About theme={theme}/></div> */}
-      <div ref={experiences}><Experience /></div>
-      <div ref={projects}><Projects /></div>
-      <div ref={skills}><Skills /></div>
-      <div ref={contact}><Contacts /></div>
+      <Experience />
+      <Projects />
+      <Skills />
+      <OpenSourceContributions />
+      <BlogList />
+      <Contacts />
       <Footer />
       <ScrollToTop
         smooth
