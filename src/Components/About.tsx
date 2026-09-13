@@ -3,7 +3,7 @@ import profile from '../assets/Irene.jpg'
 
 export default function About(){
     return(
-        <section>
+        <section id='about'>
             <div className="max-w-4xl mx-auto my-10">
                 <p className="text-white mb-4">
                     // <span className="text-(--special-color)">about</span>

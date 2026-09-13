@@ -54,7 +54,7 @@ function ArticleCard({ article }: { article: Articles }) {
 
 export default function BlogList() {
   return (
-    <section>
+    <section id='blog'>
       <div className="mb-20 max-w-4xl mx-auto mt-20 px-20 md:px-0">
         <p className="text-white">
           // <span className="text-(--special-color)">Writing</span>

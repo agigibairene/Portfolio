@@ -104,6 +104,7 @@ function ContactCard({ label, value, href, icon: Icon }: ContactCardProps) {
 export default function Contacts() {
   return (
     <div
+      id='contact'
       className="min-h-screen flex items-center justify-center p-6 sm:p-10"
       style={{ color: "var(--text-color)" }}
     >
