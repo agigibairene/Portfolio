@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { NavLink } from "react-router-dom";
 import { FaBars, FaTimes } from "react-icons/fa";
 
 interface NavItem {
@@ -85,8 +86,8 @@ export default function NavBar() {
                 <ul className="hidden md:flex gap-6">
                     {links.map((item) => (
                         <li key={item.id}>
-                            <a
-                                href={`#${item.id}`}
+                            <NavLink
+                                to={`/${item.id}`}
                                 onClick={handleScroll(item.id)}
                                 className={`
                                     relative
@@ -101,7 +102,7 @@ export default function NavBar() {
                                 `}
                             >
                                 {item.label}
-                            </a>
+                            </NavLink>
                         </li>
                     ))}
                 </ul>
@@ -133,9 +134,9 @@ export default function NavBar() {
                 {isOpen && (
                     <div className="absolute top-full left-0 w-full bg-[#081b29] md:hidden flex flex-col items-center gap-4 py-6 shadow-lg z-40">
                         {links.map((item) => (
-                            <a
+                            <NavLink
                                 key={item.id}
-                                href={`#${item.id}`}
+                                to={`/${item.id}`}
                                 onClick={handleScroll(item.id)}
                                 className={`
                                     text-lg
@@ -149,7 +150,7 @@ export default function NavBar() {
                                 `}
                             >
                                 {item.label}
-                            </a>
+                            </NavLink>
                         ))}
 
                         <a
