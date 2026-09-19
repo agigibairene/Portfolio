@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { NavLink } from "react-router-dom";
 import { FaBars, FaTimes } from "react-icons/fa";
+import resume from '../assets/resume.pdf'
 
 interface NavItem {
     id: string;
@@ -110,7 +111,7 @@ export default function NavBar() {
                 {/* Resume */}
                 <a
                     className="resume view outline-0 hidden md:inline-block"
-                    href=""
+                    href={resume}
                     target="_blank"
                     rel="noopener noreferrer"
                 >
