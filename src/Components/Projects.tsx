@@ -64,7 +64,7 @@ function ProjectCard({ project }: { project: Project }) {
 export default function ProjectList() {
   return (
     <section id='projects'>
-      <div className="mb-20 max-w-4xl mx-auto mt-20 px-20 md:px-0">
+      <div className="mb-20 max-w-4xl mx-auto mt-20 px-6 md:px-0">
         <p className="text-white">
           // <span className="text-(--special-color)">Project</span>
         </p>

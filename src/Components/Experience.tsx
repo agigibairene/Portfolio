@@ -166,7 +166,7 @@ export default function Experience() {
   return (
     <section id='experiences' style={{ background: "var(--bg-color)" }}>
       {/* Heading */}
-      <div className="mb-20 px-20 md:px-0 max-w-4xl mx-auto mt-20">
+      <div className="mb-20 px-6 md:px-0 max-w-4xl mx-auto mt-20">
         <p className="text-white mb-4">
           //{" "}
           <span className="text-(--special-color)">

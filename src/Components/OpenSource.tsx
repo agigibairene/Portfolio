@@ -56,7 +56,7 @@ function ContributionCard({ contribution }: { contribution: Contribution }) {
 export default function ContributionList() {
   return (
     <section>
-      <div className="mb-20 max-w-4xl mx-auto mt-20 px-20 md:px-0">
+      <div className="mb-20 max-w-4xl mx-auto mt-20 px-6 md:px-0">
         <p className="text-white">
           // <span className="text-(--special-color)">Open Source</span>
         </p>

@@ -1,12 +1,5 @@
 import { useEffect, useRef, useState } from "react";
 
-/**
- * TerminalHero
- * A hero section styled as a working terminal window, with a real,
- * interactive command line (help, ls, cd, cat, open, whoami, clear, sudo, echo).
- *
- * Colors blend dynamically with the site's theme variables (--card-color, --text-color, --special-color #00abf0).
- */
 
 const SECTIONS = [
   "about",

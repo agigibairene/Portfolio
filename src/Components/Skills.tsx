@@ -5,7 +5,7 @@ import type { SkillCategory } from '../utils/skillData';
 export default function Skills() {
     return (
         <section>
-            <div className="max-w-4xl mx-auto mt-20 mb-20">
+            <div className="mb-20 max-w-4xl mx-auto mt-20 px-6 md:px-0">
                 <p className='text-white'>// <span className='text-(--special-color)'>tools</span></p>
                 <h2 className="text-white font-bold text-3xl">
                     Langs, Tools and Frameworks I use
