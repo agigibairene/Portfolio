@@ -93,7 +93,7 @@ export default function TerminalHero() {
         );
         break;
       case "whoami":
-        print("irene agigiba — software engineer, backend & systems, full stack enthusiast");
+        print("irene agigiba — software engineer");
         break;
       case "ls":
         print(SECTIONS.join("  ") + "  resume.pdf");
@@ -205,9 +205,8 @@ export default function TerminalHero() {
               <span className="inline-block w-2.5 h-[1em] bg-[#00abf0] ml-1 align-[-2px] animate-pulse" />
             </p>
             <p className="font-sans text-(--card-text-color) opacity-80 text-[15px] mt-2.5 max-w-[52ch] leading-relaxed">
-              Software engineer focused on backend systems and
-              developer tooling. I build things that are boring in the best
-              way — reliable, well-tested, easy to read at 2am during an
+              Software engineer focused on backend and frontend systems. I build things that are boring in the best
+              way: reliable, well-tested, easy to read at 2am during an
               incident.
             </p>
 
@@ -223,7 +222,6 @@ export default function TerminalHero() {
               >
                 <span>Get in Touch</span>
               </button>
-              {/* hidden resume link, triggered by `cat resume.txt` */}
               <a
                 ref={resumeLinkRef}
                 className="hidden"
