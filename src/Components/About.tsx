@@ -7,7 +7,9 @@ export default function About() {
                 <p className="text-white mb-4">
                     // <span className="text-(--special-color)">about</span>
                 </p>
-
+                <h2 className="text-white font-bold text-3xl">
+                    About me
+                </h2>
                 <div className="grid grid-cols-[1fr] md:grid-cols-[1.4fr_1fr] gap-12 items-start mt-5">
                     <div className="text-gray-200">
                         <p className="mb-4">
