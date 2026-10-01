@@ -55,7 +55,6 @@ function ContactCard({ label, value, href, icon: Icon }: ContactCardProps) {
         background: "rgba(255,255,255,0.05)",
         backdropFilter: "blur(12px)",
         border: "none",
-        boxShadow: hovered ? "0 0 40px -4px #00abf0aa, 0 0 80px -10px #00abf066" : "var(--box-shadow)",
       }}
     >
       {/* Icon */}

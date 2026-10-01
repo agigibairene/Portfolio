@@ -18,9 +18,9 @@ function App() {
       <NavBar />
       <Terminal />
       <About />
+      <Skills />
       <Experience />
       <Projects />
-      <Skills />
       <OpenSourceContributions />
       <BlogList />
       <Contacts />

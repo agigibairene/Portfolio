@@ -212,13 +212,13 @@ export default function TerminalHero() {
 
             <div className="flex gap-3.5 mt-7 flex-wrap">
               <button
-                className="group text-sm cursor-pointer font-semibold px-6 py-2.5 rounded-xl bg-linear-to-r from-[#00abf0] via-[#0ea5ea] to-[#0bd1d1] text-slate-950 inline-flex items-center gap-2 transition-all duration-300 hover:-translate-y-0.5 hover:scale-[1.02] shadow-[0_4px_16px_rgba(0,171,240,0.35)] hover:shadow-[0_6px_25px_rgba(0,171,240,0.55)] border border-[#00abf0]/40 active:translate-y-0"
+                className="group text-sm cursor-pointer font-semibold px-6 py-2.5 rounded-xl bg-linear-to-r from-[#00abf0] via-[#0ea5ea] to-[#0bd1d1] text-slate-950 inline-flex items-center gap-2 transition-all duration-300 hover:-translate-y-0.5 hover:scale-[1.02] shadow-[0_4px_16px_rgba(0,171,240,0.35)]  border border-[#00abf0]/40 active:translate-y-0"
               >
                 <span>View Projects</span>
                 <span className="transition-transform duration-300 group-hover:translate-x-1">→</span>
               </button>
               <button
-                className="group text-sm cursor-pointer font-medium px-5 py-2.5 rounded-xl border border-[#00abf0]/35 bg-[#00abf0]/5 backdrop-blur-sm text-(--text-color) inline-flex items-center gap-2 transition-all duration-300 hover:-translate-y-0.5 hover:scale-[1.02] hover:border-[#00abf0] hover:text-[#00abf0] hover:bg-[#00abf0]/15 hover:shadow-[0_0_20px_rgba(0,171,240,0.25)] active:translate-y-0"
+                className="group text-sm cursor-pointer font-medium px-5 py-2.5 rounded-xl border border-[#00abf0]/35 bg-[#00abf0]/5 backdrop-blur-sm text-(--text-color) inline-flex items-center gap-2 transition-all duration-300 hover:-translate-y-0.5 hover:scale-[1.02] hover:text-[#00abf0] hover:bg-[#00abf0]/15 active:translate-y-0"
               >
                 <span>Get in Touch</span>
               </button>
@@ -265,7 +265,7 @@ export default function TerminalHero() {
               <div ref={logEndRef} />
             </div>
 
-            <div className="flex items-center gap-2 text-[14.5px] mt-3 p-2 rounded-lg bg-black/20 border border-[#00abf0]/20 focus-within:border-[#00abf0] focus-within:shadow-[0_0_15px_rgba(0,171,240,0.25)] transition-all" style={{ fontFamily: "var(--font-mono)" }}>
+            <div className="flex items-center gap-2 text-[14.5px] mt-3 p-2 rounded-lg bg-black/20 border border-[#00abf0]/20 focus-within:border-[#00abf0] transition-all" style={{ fontFamily: "var(--font-mono)" }}>
               <span className="text-[#00abf0] font-semibold">irene-akawin@dev</span>
               <span className="text-[#0bd1d1] font-medium">{path}</span>
               <span className="text-slate-400">$</span>

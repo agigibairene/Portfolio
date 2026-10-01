@@ -71,23 +71,11 @@ function TimelineCard({ icon, title, subtitle, year, description, }: TimelineCar
       className="h-full flex gap-4 p-5 cursor-pointer rounded-xl transition-all duration-300"
       style={{
         background: "var(--card-color)",
-        boxShadow: hovered
-          ? "0px 6px 24px -4px #00abf0"
-          : "var(--box-shadow)",
-        transform: hovered ? "translateY(-3px)" : "translateY(0)",
       }}
     >
       {/* Icon bubble */}
       <div
         className="w-11 h-11 rounded-xl text-xl flex items-center justify-center shrink-0 mt-0.5 transition-all duration-300"
-        style={{
-          background: hovered
-            ? "rgba(0,171,240,0.12)"
-            : "rgba(0,171,240,0.07)",
-          border: hovered
-            ? "1px solid rgba(0,171,240,0.4)"
-            : "1px solid rgba(0,171,240,0.15)",
-        }}
       >
         {icon}
       </div>

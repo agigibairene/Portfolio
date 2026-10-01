@@ -110,7 +110,7 @@ export default function NavBar() {
 
                 {/* Resume */}
                 <a
-                    className="resume view outline-0 hidden md:inline-block"
+                    className="resume view outline-0 hidden hover:scale-[1.1] md:inline-block"
                     href={resume}
                     target="_blank"
                     rel="noopener noreferrer"
